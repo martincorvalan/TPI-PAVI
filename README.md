@@ -1,3 +1,2 @@
 # TPI-PAVI
-
-GRUPO 72 - EL WIDITO - ICARDI - DOWN 
+ 
