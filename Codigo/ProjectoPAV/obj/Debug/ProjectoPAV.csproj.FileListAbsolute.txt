@@ -1,0 +1,11 @@
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\bin\Debug\ProjectoPAV.exe.config
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\bin\Debug\ProjectoPAV.exe
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\bin\Debug\ProjectoPAV.pdb
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.Load.resources
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.Properties.Resources.resources
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.GenerateResource.cache
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.exe
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.pdb
+C:\Users\Mariano\source\repos\ProjectoPAV\ProjectoPAV\obj\Debug\ProjectoPAV.login.resources
