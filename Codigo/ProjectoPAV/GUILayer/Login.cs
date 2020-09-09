@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ProjectoPAV.DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,7 +43,11 @@ namespace ProjectoPAV
 
                 return;
             }
-
+            if (ValidarLogin(txtBoxUser.Text, txtBoxPass.Text))
+            {
+                MessageBox.Show("Inicio de sesion correcto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
+            }
         }
 
         public bool ValidarLogin(string user, string pass)
@@ -60,7 +66,25 @@ namespace ProjectoPAV
                 //Creamos un data table con el resultado de la consulta utilizando el data manager
 
                 DataTable queryResult = DataManager.GetInstance().ConsultaSQL(sqlQuery);
+
+
+                //Verifica que la consulta haya devuelto alguna fila
+                if (queryResult.Rows.Count >= 1)
+                {
+                    //Valida la contraseña comparando la cuonsulta sql y el campo txtPass.Text 
+                    if (queryResult.Rows[0]["password"].ToString() == pass)
+                    {
+                        validUser = true;
+                    }
+                }
+
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(String.Concat("Error en la base de datos: ", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
+            }
+            return validUser;
         }
     }
 }

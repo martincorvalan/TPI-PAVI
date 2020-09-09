@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="GUILayer\Login.cs">
       <SubType>Form</SubType>
@@ -94,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BussinesLayer\" />
-    <Folder Include="DataAccessLayer\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
