@@ -49,7 +49,7 @@ namespace ProjectoPAV.DataAccessLayer
                 dbConnection.Close();
         }
         
-        public DataTable ConsultaSQL(string stringQuery)
+        public DataTable ConsultaSQL(string stringQuery, Dictionary<string, object> param = null)
         {
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
@@ -59,10 +59,18 @@ namespace ProjectoPAV.DataAccessLayer
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = stringQuery;
 
+                if(param != null)
+                {
+                    foreach (var item in param)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                }
+
                 tabla.Load(cmd.ExecuteReader());
                 return tabla;
-            }
 
+            }
             catch (Exception ex)
             {
                 throw (ex);

@@ -1,4 +1,5 @@
-﻿using ProjectoPAV.DataAccessLayer;
+﻿using ProjectoPAV.BussinesLayer;
+using ProjectoPAV.DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,14 @@ namespace ProjectoPAV
 {
     public partial class Login : Form
     {
+        private readonly UserService userService;
+
+        public String UserLog { get; internal set; }
+
         public Login()
         {
             InitializeComponent();
+            userService = new UserService();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -43,12 +49,38 @@ namespace ProjectoPAV
 
                 return;
             }
-            if (ValidarLogin(txtBoxUser.Text, txtBoxPass.Text))
+
+            //Llama al servicio validar usuario y espera el retorno del objeto usuario
+            var user = userService.ValidarUser(txtBoxUser.Text, txtBoxPass.Text);
+
+            //Control de credenciales de login
+            if (user != null)
             {
-                MessageBox.Show("Inicio de sesion correcto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UserLog = user.Username;
                 this.Close();
             }
+            else
+            {
+                txtBoxPass.Text = "";
+                txtBoxPass.Focus();
+                MessageBox.Show("Ingrese usuario y contraseña validos","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+
+
+
+
+
+
+
+
+            
         }
+
+
+
 
         public bool ValidarLogin(string user, string pass)
         {

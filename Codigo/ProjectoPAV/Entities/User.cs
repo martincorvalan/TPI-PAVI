@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProjectoPAV.Entities
 {
-    class Usuario
+    public class User
     {
-        public int IdUsuario { get; set; }
-        public string NombreUsuario { get; set; }
+        public int IdUser { get; set; }
+        public string Username { get; set; }
         public string Email { get; set; }
         public string Estado { get; set; }
-
-       // public Perfil Perfil { get; set; }
+        public string Pass { get; set; }
+        public Perfil Perfil { get; set; }
 
 
         public override string ToString()
         {
-            return NombreUsuario;
+            return Username;
         }
 
     }
