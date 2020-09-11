@@ -29,7 +29,7 @@ namespace ProjectoPAV.DataAccessLayer
 
             foreach (DataRow row in resQuery.Rows)
             {
-                //ListaUser.Add(ObjectMapping(row));
+                ListaUser.Add(ObjectMapping(row));
             }
 
             return ListaUser;

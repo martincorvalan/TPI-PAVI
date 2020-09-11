@@ -15,7 +15,7 @@ namespace ProjectoPAV.Entities
         public DateTime fecha { get; set; }
 
         //Falta agregar la categoria como una entidad
-        public int id_categoria { get; set; }
+        public string categoria { get; set; }
 
     }
 
