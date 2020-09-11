@@ -121,5 +121,53 @@ namespace ProjectoPAV.DataAccessLayer
             return afectadas;
 
         }
+
+        public int EjecutarSqlParametros(string stringQuery, Dictionary<string, object> param = null)
+        {
+            //creamos un SqlCommand para realizar una consulta y una transaccion instanciada como null
+
+            int afectadas = 0;
+            SqlCommand cmd = new SqlCommand();
+            SqlTransaction t = null;
+            try
+            {
+                //Comenzamos la transaccion
+
+                t = dbConnection.BeginTransaction();
+                cmd.Connection = dbConnection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = stringQuery;
+                cmd.Transaction = t;
+
+                if (param != null)
+                {
+                    foreach (var item in param)
+                    {
+                        cmd.Parameters.AddWithValue(item.Key, item.Value);
+                    }
+                }
+
+                afectadas = cmd.ExecuteNonQuery();
+
+                //Realizamos un commit de la transaccion
+
+                t.Commit();
+            }
+            catch (Exception ex)
+            {
+                if (t != null)
+                {
+                    t.Rollback();
+                    afectadas = 0;
+                }
+                throw ex;
+            }
+            finally
+            {
+                this.Close();
+            }
+            return afectadas;
+
+        }
     }
 }

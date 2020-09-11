@@ -27,5 +27,10 @@ namespace ProjectoPAV.BussinesLayer
         {
             return cursoDao.borrar(id);
         }
+
+        public bool AgregarCurso(Dictionary<string, object> param)
+        {
+            return cursoDao.Insert(param);
+        }
     }
 }
