@@ -18,9 +18,14 @@ namespace ProjectoPAV.BussinesLayer
         }
 
 
-            public IList<Curso> ConsultarCursos()
-            {
-                return cursoDao.GetAll();
-            }
+        public IList<Curso> ConsultarCursos()
+        {
+            return cursoDao.GetAll();
+        }
+       
+        public bool BorrarCurso(int id)
+        {
+            return cursoDao.borrar(id);
+        }
     }
 }

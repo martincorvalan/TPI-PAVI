@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Deployment.Internal;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +30,17 @@ namespace ProjectoPAV.DataAccessLayer
 
             return listaCurso;
         }
+
+        public bool borrar(int id)
+        {
+            String sqlQuery = string.Concat("UPDATE[dbo].[Cursos] ",
+                                            "SET[borrado] = 1 ",
+                                            "WHERE id_curso =" + id);
+
+            return DataManager.GetInstance().EjecutarSql(sqlQuery) != 0;
+
+        }
+
 
         private Curso ObjectMapping(DataRow row)
         {

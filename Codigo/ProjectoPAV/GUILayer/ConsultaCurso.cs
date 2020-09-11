@@ -83,5 +83,23 @@ namespace ProjectoPAV.GUILayer
             dgvCursos.AutoResizeRows(
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //Cuando hace click en eliminar comprueba si el DataGridView tiene al menos 1 columna
+            if (dgvCursos.Rows.Count > 0)
+            {
+                if (MessageBox.Show("Seguro que desea eliminar el Curso seleccionado? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    //Si el usuario desea borrar la fila tomamos el valor de la celda y columna seleccionada
+
+                    int id = Convert.ToInt32(dgvCursos.CurrentRow.Cells["ID"].Value);
+                    if (cursoService.BorrarCurso(id))
+                    {
+                        MessageBox.Show("Curso Borrado");
+                    }
+                }
+            }
+        }
     }
 }

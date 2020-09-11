@@ -1,5 +1,6 @@
 ﻿using ProjectoPAV.BussinesLayer;
 using ProjectoPAV.DataAccessLayer;
+using ProjectoPAV.GUILayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +58,9 @@ namespace ProjectoPAV
             if (user != null)
             {
                 UserLog = user.Username;
-                this.Close();
+                ConsultaCurso formConsultaCurso = new ConsultaCurso();
+                formConsultaCurso.Show();
+                this.Hide();
             }
             else
             {
@@ -65,22 +68,8 @@ namespace ProjectoPAV
                 txtBoxPass.Focus();
                 MessageBox.Show("Ingrese usuario y contraseña validos","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-
-
-
-
-
-
-
-
             
         }
-
-
-
 
         public bool ValidarLogin(string user, string pass)
         {

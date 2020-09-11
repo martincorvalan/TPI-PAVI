@@ -24,8 +24,8 @@ namespace ProjectoPAV
             {
                 timerload.Stop();
                 Login log = new Login();
-                log.Show();
                 this.Hide();
+                log.Show();
 
             }
         }   

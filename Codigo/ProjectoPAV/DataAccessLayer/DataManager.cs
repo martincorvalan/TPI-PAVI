@@ -75,6 +75,50 @@ namespace ProjectoPAV.DataAccessLayer
             {
                 throw (ex);
             }
+            finally
+            {
+                this.Close();
+            }
+
+        }
+
+        public int EjecutarSql(string stringQuery)
+        {
+            //creamos un SqlCommand para realizar una consulta y una transaccion instanciada como null
+
+            int afectadas = 0;
+            SqlCommand cmd = new SqlCommand();
+            SqlTransaction t = null;
+            try
+            {
+                //Comenzamos la transaccion
+
+                t = dbConnection.BeginTransaction();
+                cmd.Connection = dbConnection;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = stringQuery;
+                cmd.Transaction = t;
+
+                afectadas = cmd.ExecuteNonQuery();
+
+                //Realizamos un commit de la transaccion
+
+                t.Commit();
+            }
+            catch (Exception ex)
+            {
+                if (t != null)
+                {
+                    t.Rollback();
+                    afectadas = 0;
+                }
+                throw ex;
+            }
+            finally
+            {
+                this.Close();
+            }
+            return afectadas;
 
         }
     }
