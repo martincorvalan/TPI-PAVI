@@ -43,20 +43,17 @@ namespace ProjectoPAV.DataAccessLayer
 
         public bool Insert(Dictionary<string, object> param)
         {   
-            String sqlQuery = string.Concat("ALTER TABLE[Cursos] DROP COLUMN id_curso ",
-                                            "ALTER TABLE[Cursos] ADD id_curso INT IDENTITY(1, 1)",
-                                            "INSERT INTO [dbo].[Cursos] ",
+            String sqlQuery = string.Concat("INSERT INTO [dbo].[Cursos] ",
                                             "([nombre] ",
                                             ",[descripcion] ",
                                             ",[fecha_vigencia] ",
                                             ",[id_categoria] ",
                                             ",[borrado]) ",
                                             "VALUES ",
-                                            "(id_curso ",
-                                            ",@nombre ",
-                                            ",'descripcion' ",
-                                            ",@fecha " ,
-                                            ",1 ",
+                                            "(@nombre ",
+                                            ", @descripcion ",
+                                            ", @fecha " ,
+                                            ", @id_categoria ",
                                             ", 0)");
 
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;

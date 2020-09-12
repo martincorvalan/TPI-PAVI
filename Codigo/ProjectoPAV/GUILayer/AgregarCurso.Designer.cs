@@ -145,6 +145,7 @@
             this.Controls.Add(this.background);
             this.Name = "AgregarCurso";
             this.Text = "AgregarCurso";
+            this.Load += new System.EventHandler(this.AgregarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

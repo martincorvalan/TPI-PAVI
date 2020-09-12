@@ -191,7 +191,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Cursos](
-	[id_curso] [int] NOT NULL,
+	[id_curso] [int] IDENTITY(1,1) NOT NULL,
 	[nombre] [varchar](50) NULL,
 	[descripcion] [nvarchar](50) NULL,
 	[fecha_vigencia] [datetime] NULL,
