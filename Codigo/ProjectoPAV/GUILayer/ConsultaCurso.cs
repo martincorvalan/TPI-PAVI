@@ -101,5 +101,13 @@ namespace ProjectoPAV.GUILayer
                 }
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvCursos.CurrentRow.Cells["ID"].Value);
+            ModificarCurso modCurso = new ModificarCurso(id);
+            modCurso.ShowDialog();
+            this.Hide();
+        }
     }
 }

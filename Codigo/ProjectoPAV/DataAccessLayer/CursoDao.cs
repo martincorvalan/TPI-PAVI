@@ -59,6 +59,17 @@ namespace ProjectoPAV.DataAccessLayer
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
 
+        public bool Modificar(Dictionary<string, object> param)
+        {
+            String sqlQuery = string.Concat("UPDATE[dbo].[Cursos] ",
+                                            "SET[nombre] = @nombre ",
+                                            ",[descripcion] = @descripcion ",
+                                            ",[fecha_vigencia] = @fecha ",
+                                            ",[id_categoria] = @id_categoria ",
+                                            "WHERE id_curso = @id"
+                                             );
+            return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
+        }
 
         private Curso ObjectMapping(DataRow row)
         {

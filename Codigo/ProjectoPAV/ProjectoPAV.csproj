@@ -69,6 +69,12 @@
     <Compile Include="GUILayer\ConsultaCurso.Designer.cs">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\ModificarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ModificarCurso.Designer.cs">
+      <DependentUpon>ModificarCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ModificarCurso.resx">
+      <DependentUpon>ModificarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

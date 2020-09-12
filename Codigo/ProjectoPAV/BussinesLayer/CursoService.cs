@@ -32,5 +32,10 @@ namespace ProjectoPAV.BussinesLayer
         {
             return cursoDao.Insert(param);
         }
+
+        public bool ModificarCurso(Dictionary<string, object> param)
+        {
+            return cursoDao.Modificar(param);
+        }
     }
 }
