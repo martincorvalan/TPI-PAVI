@@ -31,6 +31,33 @@ namespace ProjectoPAV.DataAccessLayer
             return listaCurso;
         }
 
+        public IList<Curso> ConsultarCurso(Dictionary<string, object> param)
+        {
+            List<Curso> listaCurso = new List<Curso>();
+
+            String SqlQuery = string.Concat("SELECT c.id_curso, c.nombre, c.descripcion, c.fecha_vigencia, ca.nombre as 'nomcat', ca.id_categoria ",
+                                            "FROM Cursos c ",
+                                            "JOIN Categorias ca ON(c.id_categoria = ca.id_categoria) ",
+                                            "WHERE c.borrado = 0 AND ca.borrado = 0");
+            if (param.ContainsKey("Nombre"))
+                SqlQuery += " AND (c.nombre = @Nombre) ";
+            if (param.ContainsKey("Fecha"))
+                SqlQuery += " AND (c.fecha_vigencia >= @Fecha) ";
+            if (param.ContainsKey("IdCategoria"))
+                SqlQuery += " AND (ca.id_categoria = @IdCategoria) ";
+
+
+
+            var resQuery = DataManager.GetInstance().ConsultaSQL(SqlQuery, param);
+
+            foreach (DataRow row in resQuery.Rows)
+            {
+                listaCurso.Add(ObjectMapping(row));
+            }
+
+            return listaCurso;
+        }
+
         public bool borrar(int id)
         {
             String sqlQuery = string.Concat("UPDATE[dbo].[Cursos] ",
@@ -80,7 +107,11 @@ namespace ProjectoPAV.DataAccessLayer
                 descripcion = row["descripcion"].ToString(),
                 fecha = Convert.ToDateTime(row["fecha_vigencia"].ToString()),
                 //Falta crear la entidad Categoria
-                categoria = row["nomcat"].ToString()
+                categoria = new Categoria
+                {
+                    nombre = row["nomcat"].ToString(),
+                    id_categoria = Convert.ToInt32(row["id_categoria"].ToString())
+                }
             };
 
             return oCurso;

@@ -32,13 +32,13 @@
             this.background = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,13 +66,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(174, 20);
             this.txtDescripcion.TabIndex = 2;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(158, 155);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(174, 20);
-            this.txtFecha.TabIndex = 3;
             // 
             // cmbCategoria
             // 
@@ -128,18 +121,26 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(158, 155);
+            this.txtFecha.Mask = "00/00/0000";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(174, 20);
+            this.txtFecha.TabIndex = 14;
+            // 
             // AgregarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 450);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.cmbCategoria);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.background);
@@ -157,12 +158,12 @@
         private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.MaskedTextBox txtFecha;
     }
 }

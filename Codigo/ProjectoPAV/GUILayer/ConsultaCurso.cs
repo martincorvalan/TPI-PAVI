@@ -1,4 +1,5 @@
 ﻿using ProjectoPAV.BussinesLayer;
+using ProjectoPAV.DataAccessLayer;
 using ProjectoPAV.Entities;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,28 @@ namespace ProjectoPAV.GUILayer
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-           // Linea comentada abajo falta definir el service con el metodo de consulta.
+            // Linea comentada abajo falta definir el service con el metodo de consulta.
 
-            IList<Curso> listadoCursos = cursoService.ConsultarCursos();
+            Dictionary<string, object> filtros = new Dictionary<string, object>();
+
+            DateTime fecha;
+
+            if (txtNombre.Text != string.Empty)
+            {
+                filtros.Add("Nombre", txtNombre.Text);
+            }
+
+            if (DateTime.TryParse(txtFecha.Text, out fecha))
+                filtros.Add("Fecha", fecha);
+
+            if (!string.IsNullOrEmpty(cmbCategoria.Text))
+            {
+                var categoria = cmbCategoria.SelectedValue.ToString();
+                filtros.Add("IdCategoria", categoria);
+            }
+
+
+            IList<Curso> listadoCursos = cursoService.ConsultarCursos(filtros);
 
             dgvCursos.DataSource = listadoCursos;
 
@@ -105,9 +125,34 @@ namespace ProjectoPAV.GUILayer
         private void btnModificar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgvCursos.CurrentRow.Cells["ID"].Value);
-            ModificarCurso modCurso = new ModificarCurso(id);
+            ModificarCurso modCurso = new ModificarCurso();
+            var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+            modCurso.InicializarForm(curso);
             modCurso.ShowDialog();
-            this.Hide();
+            
+        }
+
+        private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
+        {
+            // Datasource: establece el origen de datos de este objeto.
+            cmb.DataSource = source;
+            // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
+            cmb.DisplayMember = display;
+            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
+            cmb.ValueMember = value;
+            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
+            cmb.SelectedIndex = -1;
+        }
+
+        private void ConsultaCurso_Load(object sender, EventArgs e)
+        {
+            LlenarCombo(cmbCategoria, DataManager.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarCurso agregar = new AgregarCurso();
+            agregar.ShowDialog();
         }
     }
 }

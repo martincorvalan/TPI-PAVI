@@ -18,9 +18,9 @@ namespace ProjectoPAV.BussinesLayer
         }
 
 
-        public IList<Curso> ConsultarCursos()
+        public IList<Curso> ConsultarCursos(Dictionary<string, object> param)
         {
-            return cursoDao.GetAll();
+            return cursoDao.ConsultarCurso(param);
         }
        
         public bool BorrarCurso(int id)

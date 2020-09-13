@@ -32,13 +32,13 @@ namespace ProjectoPAV.GUILayer
         {
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -50,17 +50,10 @@ namespace ProjectoPAV.GUILayer
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(146, 88);
+            this.txtDescripcion.Location = new System.Drawing.Point(145, 88);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 1;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(146, 133);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(121, 20);
-            this.txtFecha.TabIndex = 2;
             // 
             // lblNombre
             // 
@@ -83,11 +76,11 @@ namespace ProjectoPAV.GUILayer
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(102, 136);
+            this.lblFecha.Location = new System.Drawing.Point(58, 136);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(37, 13);
+            this.lblFecha.Size = new System.Drawing.Size(81, 13);
             this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "Fecha";
+            this.lblFecha.Text = "Fecha Vigencia";
             // 
             // lblCategoria
             // 
@@ -116,18 +109,26 @@ namespace ProjectoPAV.GUILayer
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(146, 133);
+            this.txtFecha.Mask = "00/00/0000";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(121, 20);
+            this.txtFecha.TabIndex = 13;
+            // 
             // ModificarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 313);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Name = "ModificarCurso";
@@ -144,12 +145,12 @@ namespace ProjectoPAV.GUILayer
 
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.MaskedTextBox txtFecha;
     }
 }

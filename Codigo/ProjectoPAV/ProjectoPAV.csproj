@@ -54,6 +54,7 @@
     <Compile Include="DataAccessLayer\CursoDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
     <Compile Include="DataAccessLayer\UserDao.cs" />
+    <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Curso.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\User.cs" />
