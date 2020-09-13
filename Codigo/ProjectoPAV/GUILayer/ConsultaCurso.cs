@@ -106,29 +106,18 @@ namespace ProjectoPAV.GUILayer
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //Cuando hace click en eliminar comprueba si el DataGridView tiene al menos 1 columna
-            if (dgvCursos.Rows.Count > 0)
-            {
-                if (MessageBox.Show("Seguro que desea eliminar el Curso seleccionado? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    //Si el usuario desea borrar la fila tomamos el valor de la celda y columna seleccionada
-
-                    int id = Convert.ToInt32(dgvCursos.CurrentRow.Cells["ID"].Value);
-                    if (cursoService.BorrarCurso(id))
-                    {
-                        MessageBox.Show("Curso Borrado");
-                    }
-                }
-            }
+            AMB frmABM = new AMB();
+            var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+            frmABM.InicializarForm(AMB.FormMode.eliminar, curso);
+            frmABM.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgvCursos.CurrentRow.Cells["ID"].Value);
-            ModificarCurso modCurso = new ModificarCurso();
+            AMB frmABM = new AMB();
             var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
-            modCurso.InicializarForm(curso);
-            modCurso.ShowDialog();
+            frmABM.InicializarForm(AMB.FormMode.modificar, curso);
+            frmABM.ShowDialog();
             
         }
 
@@ -151,7 +140,7 @@ namespace ProjectoPAV.GUILayer
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarCurso agregar = new AgregarCurso();
+            AMB agregar = new AMB();
             agregar.ShowDialog();
         }
     }

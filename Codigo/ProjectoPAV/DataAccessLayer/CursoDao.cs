@@ -40,7 +40,7 @@ namespace ProjectoPAV.DataAccessLayer
                                             "JOIN Categorias ca ON(c.id_categoria = ca.id_categoria) ",
                                             "WHERE c.borrado = 0 AND ca.borrado = 0");
             if (param.ContainsKey("Nombre"))
-                SqlQuery += " AND (c.nombre = @Nombre) ";
+                SqlQuery += " AND (c.nombre LIKE '%'+ @Nombre + '%') ";
             if (param.ContainsKey("Fecha"))
                 SqlQuery += " AND (c.fecha_vigencia >= @Fecha) ";
             if (param.ContainsKey("IdCategoria"))
@@ -58,18 +58,21 @@ namespace ProjectoPAV.DataAccessLayer
             return listaCurso;
         }
 
-        public bool borrar(int id)
+        public bool borrar(Curso oCurso)
         {
+            var param = new Dictionary<string, object>();
             String sqlQuery = string.Concat("UPDATE[dbo].[Cursos] ",
                                             "SET[borrado] = 1 ",
-                                            "WHERE id_curso =" + id);
+                                            "WHERE id_curso = @id_curso ");
+            param.Add("id_curso", oCurso.id_curso);
 
-            return DataManager.GetInstance().EjecutarSql(sqlQuery) != 0;
+            return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) != 0;
 
         }
 
-        public bool Insert(Dictionary<string, object> param)
-        {   
+        public bool Insert(Curso oCurso)
+        {
+            var param = new Dictionary<string, object>();
             String sqlQuery = string.Concat("INSERT INTO [dbo].[Cursos] ",
                                             "([nombre] ",
                                             ",[descripcion] ",
@@ -83,18 +86,32 @@ namespace ProjectoPAV.DataAccessLayer
                                             ", @id_categoria ",
                                             ", 0)");
 
+            param.Add("id_curso", oCurso.id_curso);
+            param.Add("nombre", oCurso.nombre);
+            param.Add("Descripcion", oCurso.descripcion);
+            param.Add("fecha", oCurso.fecha);
+            param.Add("id_categoria", oCurso.categoria.id_categoria);
+
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
 
-        public bool Modificar(Dictionary<string, object> param)
+        public bool Modificar(Curso oCurso)
         {
+            var param = new Dictionary<string, object>();
             String sqlQuery = string.Concat("UPDATE[dbo].[Cursos] ",
                                             "SET[nombre] = @nombre ",
                                             ",[descripcion] = @descripcion ",
                                             ",[fecha_vigencia] = @fecha ",
                                             ",[id_categoria] = @id_categoria ",
-                                            "WHERE id_curso = @id"
+                                            "WHERE id_curso = @id_curso"
                                              );
+
+            param.Add("id_curso", oCurso.id_curso);
+            param.Add("nombre", oCurso.nombre);
+            param.Add("Descripcion", oCurso.descripcion);
+            param.Add("fecha", oCurso.fecha);
+            param.Add("id_categoria", oCurso.categoria.id_categoria);     
+
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
 

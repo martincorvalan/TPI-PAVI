@@ -58,11 +58,11 @@
     <Compile Include="Entities\Curso.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="GUILayer\AgregarCurso.cs">
+    <Compile Include="GUILayer\AMB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\AgregarCurso.Designer.cs">
-      <DependentUpon>AgregarCurso.cs</DependentUpon>
+    <Compile Include="GUILayer\AMB.Designer.cs">
+      <DependentUpon>AMB.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\ConsultaCurso.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUILayer\AgregarCurso.resx">
-      <DependentUpon>AgregarCurso.cs</DependentUpon>
+    <EmbeddedResource Include="GUILayer\AMB.resx">
+      <DependentUpon>AMB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ConsultaCurso.resx">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>

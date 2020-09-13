@@ -32,7 +32,7 @@ namespace ProjectoPAV.GUILayer
         private void btnModificar_Click(object sender, EventArgs e)
         {
             
-            Dictionary<string, object> listaCurso = new Dictionary<string, object>();
+           /* Dictionary<string, object> listaCurso = new Dictionary<string, object>();
 
             DateTime fecha;
             DateTime.TryParse(txtFecha.Text, out fecha);
@@ -47,7 +47,7 @@ namespace ProjectoPAV.GUILayer
                 listaCurso.Add("id_categoria", categoria);
             }
 
-            var resultado = cursoService.ModificarCurso(listaCurso);
+            var resultado = cursoService.ModificarCurso(listaCurso);*/
 
         }
 

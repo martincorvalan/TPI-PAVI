@@ -183,6 +183,7 @@
             this.Controls.Add(this.panelPass);
             this.Controls.Add(this.panelUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(340, 540);
             this.MinimumSize = new System.Drawing.Size(340, 540);
             this.Name = "Login";

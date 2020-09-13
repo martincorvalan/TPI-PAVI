@@ -23,19 +23,19 @@ namespace ProjectoPAV.BussinesLayer
             return cursoDao.ConsultarCurso(param);
         }
        
-        public bool BorrarCurso(int id)
+        public bool BorrarCurso(Curso oCurso)
         {
-            return cursoDao.borrar(id);
+            return cursoDao.borrar(oCurso);
         }
 
-        public bool AgregarCurso(Dictionary<string, object> param)
+        public bool AgregarCurso(Curso oCurso)
         {
-            return cursoDao.Insert(param);
+            return cursoDao.Insert(oCurso);
         }
 
-        public bool ModificarCurso(Dictionary<string, object> param)
+        public bool ModificarCurso(Curso oCurso)
         {
-            return cursoDao.Modificar(param);
+            return cursoDao.Modificar(oCurso);
         }
     }
 }
