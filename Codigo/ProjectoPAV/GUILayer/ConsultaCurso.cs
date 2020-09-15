@@ -143,5 +143,16 @@ namespace ProjectoPAV.GUILayer
             AMB agregar = new AMB();
             agregar.ShowDialog();
         }
+
+        private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvCursos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
+        }
     }
 }
