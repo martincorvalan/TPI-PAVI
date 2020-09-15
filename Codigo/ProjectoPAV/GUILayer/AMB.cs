@@ -75,16 +75,21 @@ namespace ProjectoPAV.GUILayer
             {
                 case FormMode.agregar:
                     {
-                        Curso oCurso = new Curso();
-                        oCurso.categoria = new Categoria();
-                        oCurso.nombre = txtNombre.Text;
-                        oCurso.descripcion = txtDescripcion.Text;
-                        oCurso.fecha = Convert.ToDateTime(txtFecha.Text);
-                        oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
+                        if (ValidarCampos())
+                        {
+                            Curso oCurso = new Curso();
+                            oCurso.categoria = new Categoria();
+                            oCurso.nombre = txtNombre.Text;
+                            oCurso.descripcion = txtDescripcion.Text;
+                            oCurso.fecha = Convert.ToDateTime(txtFecha.Text);
+                            oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
 
-                        var resultado = cursoService.AgregarCurso(oCurso);
+                            var resultado = cursoService.AgregarCurso(oCurso);
+                            MessageBox.Show("¡Curso Agregado Correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
 
-                        LimpiarTextBox();
+                        }
+
 
                         break;
                     }
