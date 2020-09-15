@@ -91,13 +91,23 @@ namespace ProjectoPAV.GUILayer
 
                 case FormMode.modificar:
                     {
-                        oCursoSel.nombre = txtNombre.Text;
-                        oCursoSel.descripcion = txtDescripcion.Text;
-                        oCursoSel.fecha = Convert.ToDateTime(txtFecha.Text);
-                        oCursoSel.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
+                        if (ValidarCampos())
+                        {
+                            oCursoSel.nombre = txtNombre.Text;
+                            oCursoSel.descripcion = txtDescripcion.Text;
+                            oCursoSel.fecha = Convert.ToDateTime(txtFecha.Text);
+                            oCursoSel.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
 
-                        var resultado = cursoService.ModificarCurso(oCursoSel);
+                            var resultado = cursoService.ModificarCurso(oCursoSel);
+                            if (cursoService.ModificarCurso(oCursoSel))
+                            {
+                                MessageBox.Show("El Curso seleccionado fue Modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Dispose();
+                            }
+                            else
+                                MessageBox.Show("El Curso seleccionado no puedo ser Modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        }
                         break;
                     }
 
@@ -106,11 +116,28 @@ namespace ProjectoPAV.GUILayer
                         if (cursoService.BorrarCurso(oCursoSel))
                         {
                             MessageBox.Show("Curso Borrado");
+                            this.Close();
                         }
+                        else
+                            MessageBox.Show("Error al eliminar el Curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         break;
                     }
             }
+        }
+        private bool ValidarCampos()
+        {
+
+            if (txtNombre.Text == string.Empty)
+            {
+                txtNombre.BackColor = Color.DarkRed;
+                txtNombre.Focus();
+                return false;
+            }
+            else
+                txtNombre.BackColor = Color.White;
+
+            return true;
         }
         
         private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
