@@ -85,6 +85,7 @@ namespace ProjectoPAV.GUILayer
                             oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
 
                             var resultado = cursoService.AgregarCurso(oCurso);
+                            LimpiarTextBox();
                             MessageBox.Show("¡Curso Agregado Correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
 
@@ -142,9 +143,35 @@ namespace ProjectoPAV.GUILayer
             else
                 txtNombre.BackColor = Color.White;
 
+            if (!EsFecha(txtFecha.Text))
+            {
+
+                txtFecha.BackColor = Color.DarkRed;
+                txtFecha.Focus();
+                return false;
+            }
+            if (cmbCategoria.Text == string.Empty)
+            {
+                cmbCategoria.BackColor = Color.DarkRed;
+                cmbCategoria.Focus();
+                return false;
+            }
             return true;
         }
-        
+
+        public static Boolean EsFecha(String fecha)
+        {
+            try
+            {
+                DateTime.Parse(fecha);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
         {
             // Datasource: establece el origen de datos de este objeto.

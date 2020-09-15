@@ -110,6 +110,7 @@ namespace ProjectoPAV.GUILayer
             var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
             frmABM.InicializarForm(AMB.FormMode.eliminar, curso);
             frmABM.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -118,7 +119,8 @@ namespace ProjectoPAV.GUILayer
             var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
             frmABM.InicializarForm(AMB.FormMode.modificar, curso);
             frmABM.ShowDialog();
-            
+            btnConsultar_Click(sender, e);
+
         }
 
         private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
@@ -142,6 +144,7 @@ namespace ProjectoPAV.GUILayer
         {
             AMB agregar = new AMB();
             agregar.ShowDialog();
+            btnConsultar_Click(sender, e);
         }
 
         private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
