@@ -86,7 +86,7 @@ namespace ProjectoPAV.GUILayer
 
                             var resultado = cursoService.AgregarCurso(oCurso);
                             LimpiarTextBox();
-                            MessageBox.Show("¡Curso Agregado Correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Curso Agregado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
 
                         }
@@ -107,11 +107,11 @@ namespace ProjectoPAV.GUILayer
                             var resultado = cursoService.ModificarCurso(oCursoSel);
                             if (cursoService.ModificarCurso(oCursoSel))
                             {
-                                MessageBox.Show("El Curso seleccionado fue Modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("El Curso seleccionado fue Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("El Curso seleccionado no puedo ser Modificado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("El Curso seleccionado no puedo ser Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         break;
@@ -121,11 +121,11 @@ namespace ProjectoPAV.GUILayer
                     {
                         if (cursoService.BorrarCurso(oCursoSel))
                         {
-                            MessageBox.Show("Curso Borrado");
+                            MessageBox.Show("El Curso Seleccionado Fue Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Error al eliminar el Curso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Error al eliminar el Curso Seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         break;
                     }
