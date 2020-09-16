@@ -86,7 +86,6 @@ namespace ProjectoPAV.GUILayer
 
                             var resultado = cursoService.AgregarCurso(oCurso);
                             LimpiarTextBox();
-                            MessageBox.Show("Curso Agregado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
 
                         }
@@ -118,49 +117,52 @@ namespace ProjectoPAV.GUILayer
                     }
 
                 case FormMode.eliminar:
-                    {
-                        if (cursoService.BorrarCurso(oCursoSel))
+                        if (MessageBox.Show("¿Seguro que desea eliminar el curso?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                         {
-                            MessageBox.Show("El Curso Seleccionado Fue Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                            MessageBox.Show("Error al eliminar el Curso Seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (cursoService.BorrarCurso(oCursoSel))
+                            {
+                                MessageBox.Show("El Curso Seleccionado Fue Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Error al eliminar el Curso Seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        break;
-                    }
+
+                        }   break;
             }
         }
+        
         private bool ValidarCampos()
         {
             bool validacion = true;
 
             if (txtNombre.Text == string.Empty)
             {
-                lblFaltaNombre.Enabled = true;
+                lblFaltaNombre.Visible = true;
                 txtNombre.Focus();
                 validacion = false;
             }
             else
-                lblFaltaNombre.Enabled = false;
+                lblFaltaNombre.Visible = false;
+
             if (!EsFecha(txtFecha.Text))
             {
 
-                lblFechaIncorrecta.Enabled = true;
+                lblFechaIncorrecta.Visible = true;
                 txtFecha.Focus();
                 validacion = false;
             }
             else
-                lblFechaIncorrecta.Enabled = false;
+                lblFechaIncorrecta.Visible = false;
 
             if (cmbCategoria.Text == string.Empty)
             {
-                lblCategoriaIncorrecta.Enabled = true;
+                lblCategoriaIncorrecta.Visible = true;
                 cmbCategoria.Focus();
                 validacion = false;
             }
             else
-                lblCategoriaIncorrecta.Enabled = false;
+                lblCategoriaIncorrecta.Visible = false;
 
             return validacion;
         }
@@ -209,6 +211,11 @@ namespace ProjectoPAV.GUILayer
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

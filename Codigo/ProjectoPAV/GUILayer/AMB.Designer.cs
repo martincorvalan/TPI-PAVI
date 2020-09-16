@@ -44,6 +44,8 @@
             this.lblCategoriaIncorrecta = new System.Windows.Forms.Label();
             this.lblFechaIncorrecta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,20 +66,27 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(158, 65);
+            this.txtNombre.Location = new System.Drawing.Point(158, 62);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(174, 15);
             this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(158, 119);
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.txtDescripcion.Location = new System.Drawing.Point(158, 122);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(174, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(174, 13);
             this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCategoria.ForeColor = System.Drawing.Color.White;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(158, 234);
             this.cmbCategoria.Name = "cmbCategoria";
@@ -104,7 +113,7 @@
             this.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(72, 124);
+            this.lblDescripcion.Location = new System.Drawing.Point(72, 120);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(73, 15);
             this.lblDescripcion.TabIndex = 7;
@@ -152,11 +161,15 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(158, 177);
+            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFecha.ForeColor = System.Drawing.Color.White;
+            this.txtFecha.Location = new System.Drawing.Point(147, 183);
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(174, 20);
+            this.txtFecha.Size = new System.Drawing.Size(174, 13);
             this.txtFecha.TabIndex = 14;
+            this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCancelar
             // 
@@ -177,7 +190,6 @@
             // 
             this.lblFaltaNombre.AutoSize = true;
             this.lblFaltaNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblFaltaNombre.Enabled = false;
             this.lblFaltaNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFaltaNombre.ForeColor = System.Drawing.Color.Red;
             this.lblFaltaNombre.Location = new System.Drawing.Point(196, 40);
@@ -185,30 +197,31 @@
             this.lblFaltaNombre.Size = new System.Drawing.Size(98, 13);
             this.lblFaltaNombre.TabIndex = 16;
             this.lblFaltaNombre.Text = "Ingrese un nombre!";
+            this.lblFaltaNombre.Visible = false;
             // 
             // lblCategoriaIncorrecta
             // 
             this.lblCategoriaIncorrecta.AutoSize = true;
             this.lblCategoriaIncorrecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblCategoriaIncorrecta.Enabled = false;
             this.lblCategoriaIncorrecta.ForeColor = System.Drawing.Color.Red;
             this.lblCategoriaIncorrecta.Location = new System.Drawing.Point(177, 218);
             this.lblCategoriaIncorrecta.Name = "lblCategoriaIncorrecta";
             this.lblCategoriaIncorrecta.Size = new System.Drawing.Size(131, 13);
             this.lblCategoriaIncorrecta.TabIndex = 19;
             this.lblCategoriaIncorrecta.Text = "Seleccione una categoria!";
+            this.lblCategoriaIncorrecta.Visible = false;
             // 
             // lblFechaIncorrecta
             // 
             this.lblFechaIncorrecta.AutoSize = true;
             this.lblFechaIncorrecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblFechaIncorrecta.Enabled = false;
             this.lblFechaIncorrecta.ForeColor = System.Drawing.Color.Red;
             this.lblFechaIncorrecta.Location = new System.Drawing.Point(196, 161);
             this.lblFechaIncorrecta.Name = "lblFechaIncorrecta";
             this.lblFechaIncorrecta.Size = new System.Drawing.Size(96, 13);
             this.lblFechaIncorrecta.TabIndex = 18;
             this.lblFechaIncorrecta.Text = "Ingrese una fecha!";
+            this.lblFechaIncorrecta.Visible = false;
             // 
             // panel1
             // 
@@ -217,11 +230,29 @@
             this.panel1.Size = new System.Drawing.Size(174, 1);
             this.panel1.TabIndex = 20;
             // 
+            // panel2
+            // 
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(158, 141);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(174, 1);
+            this.panel2.TabIndex = 21;
+            // 
+            // panel3
+            // 
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(158, 197);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(174, 1);
+            this.panel3.TabIndex = 22;
+            // 
             // AMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 364);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCategoriaIncorrecta);
             this.Controls.Add(this.lblFechaIncorrecta);
@@ -267,5 +298,7 @@
         private System.Windows.Forms.Label lblCategoriaIncorrecta;
         private System.Windows.Forms.Label lblFechaIncorrecta;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
