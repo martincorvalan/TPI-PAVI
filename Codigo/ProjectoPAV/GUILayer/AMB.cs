@@ -133,30 +133,36 @@ namespace ProjectoPAV.GUILayer
         }
         private bool ValidarCampos()
         {
+            bool validacion = true;
 
             if (txtNombre.Text == string.Empty)
             {
-                txtNombre.BackColor = Color.DarkRed;
+                lblFaltaNombre.Enabled = true;
                 txtNombre.Focus();
-                return false;
+                validacion = false;
             }
             else
-                txtNombre.BackColor = Color.White;
-
+                lblFaltaNombre.Enabled = false;
             if (!EsFecha(txtFecha.Text))
             {
 
-                txtFecha.BackColor = Color.DarkRed;
+                lblFechaIncorrecta.Enabled = true;
                 txtFecha.Focus();
-                return false;
+                validacion = false;
             }
+            else
+                lblFechaIncorrecta.Enabled = false;
+
             if (cmbCategoria.Text == string.Empty)
             {
-                cmbCategoria.BackColor = Color.DarkRed;
+                lblCategoriaIncorrecta.Enabled = true;
                 cmbCategoria.Focus();
-                return false;
+                validacion = false;
             }
-            return true;
+            else
+                lblCategoriaIncorrecta.Enabled = false;
+
+            return validacion;
         }
 
         public static Boolean EsFecha(String fecha)
@@ -200,6 +206,9 @@ namespace ProjectoPAV.GUILayer
             cmbCategoria.Text = oCursoSel.categoria.nombre;
         }
 
-
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
