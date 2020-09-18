@@ -252,6 +252,8 @@
             this.Controls.Add(this.dgvCursos);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(614, 481);
+            this.MinimumSize = new System.Drawing.Size(614, 481);
             this.Name = "ConsultaCurso";
             this.Text = "Consultar Curso";
             this.Load += new System.EventHandler(this.ConsultaCurso_Load);

@@ -19,7 +19,7 @@ namespace ProjectoPAV.DataAccessLayer
         {
             dbConnection = new SqlConnection();
 
-            var connection = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=True";
+            var connection = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTrackerGrupo9;Integrated Security=True";
             dbConnection.ConnectionString = connection;
         }
 
