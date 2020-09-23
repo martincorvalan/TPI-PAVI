@@ -67,6 +67,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(158, 62);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(174, 15);
             this.txtNombre.TabIndex = 1;
@@ -273,6 +274,7 @@
             this.MinimumSize = new System.Drawing.Size(432, 403);
             this.Name = "AMB";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarCurso";
             this.Load += new System.EventHandler(this.AgregarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();

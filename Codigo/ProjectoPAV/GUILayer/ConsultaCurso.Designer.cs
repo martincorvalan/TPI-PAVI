@@ -157,6 +157,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(157, 32);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 13);
             this.txtNombre.TabIndex = 6;
@@ -255,6 +256,7 @@
             this.MaximumSize = new System.Drawing.Size(614, 481);
             this.MinimumSize = new System.Drawing.Size(614, 481);
             this.Name = "ConsultaCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Curso";
             this.Load += new System.EventHandler(this.ConsultaCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();

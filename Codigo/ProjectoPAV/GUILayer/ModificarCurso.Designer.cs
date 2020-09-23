@@ -132,6 +132,7 @@ namespace ProjectoPAV.GUILayer
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Name = "ModificarCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ModificarCurso_Load);
             this.ResumeLayout(false);
