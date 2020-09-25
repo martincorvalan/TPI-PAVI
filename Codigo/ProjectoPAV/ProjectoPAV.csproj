@@ -36,8 +36,14 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\..\..\Downloads\Guna.UI2_WinForms_v2.0.0.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +76,12 @@
     <Compile Include="GUILayer\ConsultaCurso.Designer.cs">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUILayer\ModificarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ConsultaCurso.resx">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Load.resx">
       <DependentUpon>Load.cs</DependentUpon>

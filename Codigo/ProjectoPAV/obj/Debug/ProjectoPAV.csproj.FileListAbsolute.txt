@@ -23,7 +23,6 @@ C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\C
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe.config
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.pdb
-C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Load.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Login.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Properties.Resources.resources
@@ -65,3 +64,7 @@ C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.pdb
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.AMB.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ModificarCurso.resources
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.AMB.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.Menu.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Guna.UI2.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache

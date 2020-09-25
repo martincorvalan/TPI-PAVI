@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Menu = ProjectoPAV.GUILayer.Menu;
 
 namespace ProjectoPAV
 {
@@ -38,37 +39,29 @@ namespace ProjectoPAV
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtBoxUser.Text == "")
+            if (ValidarCampos())
             {
-                MessageBox.Show("Ingrese un Usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                return; 
-            }
-            if (txtBoxPass.Text == "")
-            {
-                MessageBox.Show("Ingrese una Contraseña", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //Llama al servicio validar usuario y espera el retorno del objeto usuario
+                var user = userService.ValidarUser(txtBoxUser.Text, txtBoxPass.Text);
 
-                return;
-            }
+                //Control de credenciales de login
+                if (user != null)
+                {
+                    UserLog = user.Username;
+                    Menu menu1 = new Menu(txtBoxUser.Text);
+                    menu1.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    txtBoxPass.Text = "";
+                    txtBoxPass.Focus();
+                    lblContraseñaValida.Text = "Contraseña Incorrecta";
+                    lblContraseñaValida.Visible = true;
 
-            //Llama al servicio validar usuario y espera el retorno del objeto usuario
-            var user = userService.ValidarUser(txtBoxUser.Text, txtBoxPass.Text);
-
-            //Control de credenciales de login
-            if (user != null)
-            {
-                UserLog = user.Username;
-                ConsultaCurso formConsultaCurso = new ConsultaCurso();
-                formConsultaCurso.Show();
-                this.Hide();
+                }
             }
-            else
-            {
-                txtBoxPass.Text = "";
-                txtBoxPass.Focus();
-                MessageBox.Show("Ingrese usuario y contraseña validos","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
         }
 
         public bool ValidarLogin(string user, string pass)
@@ -106,6 +99,32 @@ namespace ProjectoPAV
               
             }
             return validUser;
+        }
+
+        private bool ValidarCampos()
+        {
+            bool validacion = true;
+
+            if (txtBoxUser.Text == string.Empty)
+            {
+                lblFaltaNombreUsuario.Visible = true;
+                txtBoxUser.Focus();
+                validacion = false;
+            }
+            else
+                lblFaltaNombreUsuario.Visible = false;
+
+            if (txtBoxPass.Text == string.Empty)
+            {
+                lblContraseñaValida.Text = "Ingrese una contraseña valida";
+                lblContraseñaValida.Visible = true;
+                txtBoxUser.Focus();
+                validacion = false;
+            }
+            else
+                lblContraseñaValida.Visible = false;
+
+            return validacion;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

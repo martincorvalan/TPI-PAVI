@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelUser = new System.Windows.Forms.Panel();
             this.panelPass = new System.Windows.Forms.Panel();
@@ -40,6 +41,9 @@
             this.lblAccount = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblFaltaNombreUsuario = new System.Windows.Forms.Label();
+            this.lblContraseñaValida = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -166,12 +170,47 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // lblFaltaNombreUsuario
+            // 
+            this.lblFaltaNombreUsuario.AutoSize = true;
+            this.lblFaltaNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.lblFaltaNombreUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFaltaNombreUsuario.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaltaNombreUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblFaltaNombreUsuario.Location = new System.Drawing.Point(135, 276);
+            this.lblFaltaNombreUsuario.Name = "lblFaltaNombreUsuario";
+            this.lblFaltaNombreUsuario.Size = new System.Drawing.Size(172, 14);
+            this.lblFaltaNombreUsuario.TabIndex = 17;
+            this.lblFaltaNombreUsuario.Text = "Ingrese un nombre de usuario";
+            this.lblFaltaNombreUsuario.Visible = false;
+            // 
+            // lblContraseñaValida
+            // 
+            this.lblContraseñaValida.AutoSize = true;
+            this.lblContraseñaValida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.lblContraseñaValida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContraseñaValida.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseñaValida.ForeColor = System.Drawing.Color.Red;
+            this.lblContraseñaValida.Location = new System.Drawing.Point(135, 351);
+            this.lblContraseñaValida.Name = "lblContraseñaValida";
+            this.lblContraseñaValida.Size = new System.Drawing.Size(173, 14);
+            this.lblContraseñaValida.TabIndex = 18;
+            this.lblContraseñaValida.Text = "Ingrese una contraseña valida";
+            this.lblContraseñaValida.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(340, 540);
+            this.Controls.Add(this.lblContraseñaValida);
+            this.Controls.Add(this.lblFaltaNombreUsuario);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAccount);
@@ -211,5 +250,8 @@
         private System.Windows.Forms.Label lblAccount;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label lblContraseñaValida;
+        private System.Windows.Forms.Label lblFaltaNombreUsuario;
     }
 }
