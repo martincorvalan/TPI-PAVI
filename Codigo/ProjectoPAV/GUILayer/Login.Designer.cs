@@ -44,6 +44,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblFaltaNombreUsuario = new System.Windows.Forms.Label();
             this.lblContraseñaValida = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.userLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,6 +99,7 @@
             this.txtBoxPass.PasswordChar = '*';
             this.txtBoxPass.Size = new System.Drawing.Size(230, 16);
             this.txtBoxPass.TabIndex = 6;
+            this.txtBoxPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxPass_KeyPress);
             // 
             // btnIngresar
             // 
@@ -253,5 +255,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lblContraseñaValida;
         private System.Windows.Forms.Label lblFaltaNombreUsuario;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

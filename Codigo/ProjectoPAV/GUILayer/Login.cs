@@ -1,15 +1,8 @@
 ﻿using ProjectoPAV.BussinesLayer;
 using ProjectoPAV.DataAccessLayer;
-using ProjectoPAV.GUILayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Menu = ProjectoPAV.GUILayer.Menu;
 
@@ -118,7 +111,7 @@ namespace ProjectoPAV
             {
                 lblContraseñaValida.Text = "Ingrese una contraseña valida";
                 lblContraseñaValida.Visible = true;
-                txtBoxUser.Focus();
+                txtBoxPass.Focus();
                 validacion = false;
             }
             else
@@ -135,6 +128,16 @@ namespace ProjectoPAV
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtBoxPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)(Keys.Enter))
+            {
+                e.Handled = true;
+                btnIngresar_Click(sender, e);
+            }
         }
     }
 }

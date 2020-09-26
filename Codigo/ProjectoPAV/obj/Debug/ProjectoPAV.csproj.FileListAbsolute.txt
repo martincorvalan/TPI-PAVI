@@ -68,3 +68,5 @@ C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Guna.UI2.dll
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.Menu.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete

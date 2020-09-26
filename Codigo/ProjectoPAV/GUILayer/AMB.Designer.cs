@@ -94,7 +94,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(158, 234);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(174, 21);
-            this.cmbCategoria.TabIndex = 5;
+            this.cmbCategoria.TabIndex = 4;
             // 
             // lblNombre
             // 
@@ -157,7 +157,7 @@
             this.btnAceptar.MinimumSize = new System.Drawing.Size(86, 30);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(86, 30);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -171,7 +171,7 @@
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(174, 13);
-            this.txtFecha.TabIndex = 14;
+            this.txtFecha.TabIndex = 3;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnCancelar
@@ -184,7 +184,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(235, 286);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 30);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

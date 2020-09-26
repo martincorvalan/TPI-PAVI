@@ -124,8 +124,16 @@ namespace ProjectoPAV.GUILayer
 
             if (!string.IsNullOrEmpty(cmbCategoria.Text))
             {
-                var categoria = cmbCategoria.SelectedValue.ToString();
-                filtros.Add("IdCategoria", categoria);
+                if (cmbCategoria.FindStringExact(cmbCategoria.Text) != -1)
+                {
+                    var categoria = cmbCategoria.SelectedValue.ToString();
+                    filtros.Add("IdCategoria", categoria);
+                    lblCategoriaIncorrecta.Visible = false;
+                }
+                else
+                {
+                    lblCategoriaIncorrecta.Visible = true;
+                }
             }
 
 
