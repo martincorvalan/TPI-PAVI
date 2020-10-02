@@ -55,13 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinesLayer\CategoriaService.cs" />
     <Compile Include="BussinesLayer\CursoService.cs" />
+    <Compile Include="BussinesLayer\ObjetivoService.cs" />
     <Compile Include="BussinesLayer\UserService.cs" />
+    <Compile Include="DataAccessLayer\CategoriaDao.cs" />
     <Compile Include="DataAccessLayer\CursoDao.cs" />
     <Compile Include="DataAccessLayer\DataManager.cs" />
+    <Compile Include="DataAccessLayer\ObjetivoDao.cs" />
     <Compile Include="DataAccessLayer\UserDao.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Curso.cs" />
+    <Compile Include="Entities\Objetivo.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="GUILayer\AMB.cs">
@@ -75,6 +80,30 @@
     </Compile>
     <Compile Include="GUILayer\ConsultaCurso.Designer.cs">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ConsultaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ConsultaCategoria.Designer.cs">
+      <DependentUpon>ConsultaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ConsultaObjetivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ConsultaObjetivo.Designer.cs">
+      <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ABMCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ABMCategoria.Designer.cs">
+      <DependentUpon>ABMCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ABMObjetivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ABMObjetivo.Designer.cs">
+      <DependentUpon>ABMObjetivo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Menu.cs">
       <SubType>Form</SubType>
@@ -102,11 +131,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUILayer\ABMCategoria.resx">
+      <DependentUpon>ABMCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ABMObjetivo.resx">
+      <DependentUpon>ABMObjetivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\AMB.resx">
       <DependentUpon>AMB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ConsultaCategoria.resx">
+      <DependentUpon>ConsultaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ConsultaCurso.resx">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ConsultaObjetivo.resx">
+      <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -97,7 +97,14 @@ namespace ProjectoPAV.GUILayer
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            panelCentral.BringToFront();
+            
+            OpenForm<ConsultaCategoria>();
+            
+        }
+
+        private void btnOpcion_Click(object sender, EventArgs e)
+        {
+            OpenForm<ConsultaObjetivo>();
         }
     }
 }

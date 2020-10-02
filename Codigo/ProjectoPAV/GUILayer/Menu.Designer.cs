@@ -181,9 +181,10 @@
             this.btnOpcion.ShadowDecoration.Parent = this.btnOpcion;
             this.btnOpcion.Size = new System.Drawing.Size(226, 45);
             this.btnOpcion.TabIndex = 4;
-            this.btnOpcion.Text = "Configuracion";
+            this.btnOpcion.Text = "Objetivos";
             this.btnOpcion.UseTransparentBackground = true;
             this.btnOpcion.CheckedChanged += new System.EventHandler(this.btnCursos_CheckedChanged);
+            this.btnOpcion.Click += new System.EventHandler(this.btnOpcion_Click);
             // 
             // btnCategorias
             // 

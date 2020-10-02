@@ -171,7 +171,10 @@ namespace ProjectoPAV.GUILayer
         {
             try
             {
-                DateTime.Parse(fecha);
+                DateTime fechaMin = new DateTime(1753,1,1);
+                DateTime fechaIng = DateTime.Parse(fecha);
+                if (fechaIng.CompareTo(fechaMin) < 0 )
+                    return false;
                 return true;
             }
             catch

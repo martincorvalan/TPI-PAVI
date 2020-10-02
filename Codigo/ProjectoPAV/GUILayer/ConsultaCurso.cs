@@ -66,14 +66,6 @@ namespace ProjectoPAV.GUILayer
                 DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            AMB frmABM = new AMB();
-            var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
-            frmABM.InicializarForm(AMB.FormMode.eliminar, curso);
-            frmABM.ShowDialog();
-            btnSearch_Click(sender, e);
-        }
 
 
         private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
