@@ -35,16 +35,20 @@ namespace ProjectoPAV.DataAccessLayer
         {
             List<Curso> listaCurso = new List<Curso>();
 
-            String SqlQuery = string.Concat("SELECT c.id_curso, c.nombre, c.descripcion, c.fecha_vigencia, ca.nombre as 'nomcat', ca.id_categoria ",
+            String SqlQuery = string.Concat("SELECT c.id_curso, c.nombre, c.descripcion, c.fecha_vigencia, ca.nombre as 'nomcat', ca.id_categoria, c.borrado ",
                                             "FROM Cursos c ",
                                             "JOIN Categorias ca ON(c.id_categoria = ca.id_categoria) ",
-                                            "WHERE c.borrado = 0 AND ca.borrado = 0");
+                                            "WHERE 1 = 1");
             if (param.ContainsKey("Nombre"))
                 SqlQuery += " AND (c.nombre LIKE '%'+ @Nombre + '%') ";
             if (param.ContainsKey("Fecha"))
                 SqlQuery += " AND (c.fecha_vigencia >= @Fecha) ";
             if (param.ContainsKey("IdCategoria"))
                 SqlQuery += " AND (ca.id_categoria = @IdCategoria) ";
+            if (param.ContainsKey("Borrado"))
+                SqlQuery += " AND (ca.borrado = 0) ";
+            else
+                SqlQuery += " AND (c.borrado = 0 AND ca.borrado = 0)";
 
 
 
@@ -123,12 +127,14 @@ namespace ProjectoPAV.DataAccessLayer
                 nombre = row["nombre"].ToString(),
                 descripcion = row["descripcion"].ToString(),
                 fecha = Convert.ToDateTime(row["fecha_vigencia"].ToString()),
-                //Falta crear la entidad Categoria
+                //borrado = row["borrado"].ToString(),
+                borrado = row["borrado"].ToString() == "True" ? "Borrado" : "Activo",
                 categoria = new Categoria
                 {
                     nombre = row["nomcat"].ToString(),
                     id_categoria = Convert.ToInt32(row["id_categoria"].ToString())
                 }
+
             };
 
             return oCurso;

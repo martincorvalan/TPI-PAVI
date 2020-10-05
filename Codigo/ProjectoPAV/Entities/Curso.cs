@@ -14,6 +14,7 @@ namespace ProjectoPAV.Entities
         public string descripcion { get; set; }
         public DateTime fecha { get; set; }
         public Categoria categoria { get; set; }
+        public string borrado { get; set; }
 
 
 

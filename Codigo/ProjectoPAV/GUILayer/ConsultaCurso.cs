@@ -27,7 +27,7 @@ namespace ProjectoPAV.GUILayer
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvCursos.ColumnCount = 4;
+            dgvCursos.ColumnCount = 5;
             dgvCursos.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -52,11 +52,15 @@ namespace ProjectoPAV.GUILayer
 
             dgvCursos.Columns[2].Name = "Fecha";
             dgvCursos.Columns[2].DataPropertyName = "fecha";
-            dgvCursos.Columns[2].Width = 120;
+            dgvCursos.Columns[2].Width = 70;
 
             dgvCursos.Columns[3].Name = "Categoria";
             dgvCursos.Columns[3].DataPropertyName = "categoria";
             dgvCursos.Columns[3].Width = 120;
+
+            dgvCursos.Columns[4].Name = "Estado";
+            dgvCursos.Columns[4].DataPropertyName = "borrado";
+            dgvCursos.Columns[4].Width = 50;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
@@ -128,16 +132,23 @@ namespace ProjectoPAV.GUILayer
                 }
             }
 
+            if (chbBorrados.Checked)
+            {
+                filtros.Add("Borrado", true);
+            }
+
 
             IList<Curso> listadoCursos = cursoService.ConsultarCursos(filtros);
 
             dgvCursos.DataSource = listadoCursos;
 
+            lblCantidad.Text = dgvCursos.Rows.Count.ToString();
+
             /*if (dgvCursos.Rows.Count == 0)
             {
                 MessageBox.Show("No se encontraron coincidencias para el/los filtros ingresados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }*/
-         
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -170,6 +181,25 @@ namespace ProjectoPAV.GUILayer
             AMB agregar = new AMB();
             agregar.ShowDialog();
             btnSearch_Click(sender, e);
+        }
+
+        private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvCursos.Columns[e.ColumnIndex].Name == "Estado")
+                if ((string)e.Value == "Borrado")
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(211, 110, 112);
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(211, 110, 112);
+                }
+        }
+
+        private void lblBorradosCheck_Click(object sender, EventArgs e)
+        {
+            if(chbBorrados.CheckState == 0)
+                chbBorrados.CheckState = CheckState.Checked;
+            else
+                chbBorrados.CheckState = CheckState.Unchecked;
         }
     }
 }
