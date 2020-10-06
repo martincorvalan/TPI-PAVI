@@ -48,6 +48,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.lblDarAlta = new System.Windows.Forms.Label();
+            this.chbDarAlta = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
@@ -254,11 +256,36 @@
             this.guna2Elipse1.BorderRadius = 22;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // lblDarAlta
+            // 
+            this.lblDarAlta.AutoSize = true;
+            this.lblDarAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.lblDarAlta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDarAlta.ForeColor = System.Drawing.Color.White;
+            this.lblDarAlta.Location = new System.Drawing.Point(79, 347);
+            this.lblDarAlta.Name = "lblDarAlta";
+            this.lblDarAlta.Size = new System.Drawing.Size(52, 15);
+            this.lblDarAlta.TabIndex = 23;
+            this.lblDarAlta.Text = "Dar Alta";
+            this.lblDarAlta.Visible = false;
+            // 
+            // chbDarAlta
+            // 
+            this.chbDarAlta.AutoSize = true;
+            this.chbDarAlta.Location = new System.Drawing.Point(147, 347);
+            this.chbDarAlta.Name = "chbDarAlta";
+            this.chbDarAlta.Size = new System.Drawing.Size(15, 14);
+            this.chbDarAlta.TabIndex = 24;
+            this.chbDarAlta.UseVisualStyleBackColor = true;
+            this.chbDarAlta.Visible = false;
+            // 
             // AMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 403);
+            this.Controls.Add(this.chbDarAlta);
+            this.Controls.Add(this.lblDarAlta);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -311,5 +338,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.CheckBox chbDarAlta;
+        private System.Windows.Forms.Label lblDarAlta;
     }
 }

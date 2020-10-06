@@ -46,6 +46,11 @@ namespace ProjectoPAV.GUILayer
                     {
                         this.Text = "Modificar curso";
                         MostrarDatos();
+                        if (oCursoSel.borrado == "Borrado")
+                        {
+                            chbDarAlta.Visible = true;
+                            lblDarAlta.Visible = true;
+                        }
                         break;
                     }
                 case FormMode.eliminar:
@@ -102,8 +107,12 @@ namespace ProjectoPAV.GUILayer
                             oCursoSel.descripcion = txtDescripcion.Text;
                             oCursoSel.fecha = Convert.ToDateTime(txtFecha.Text);
                             oCursoSel.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
+                            if (chbDarAlta.Visible == true)
+                                oCursoSel.borrado = chbDarAlta.Checked ? "Activo" : "Borrado";
 
-                            var resultado = cursoService.ModificarCurso(oCursoSel);
+
+
+                           var resultado = cursoService.ModificarCurso(oCursoSel);
                             if (cursoService.ModificarCurso(oCursoSel))
                             {
                                 MessageBox.Show("El Curso seleccionado fue Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -157,12 +166,24 @@ namespace ProjectoPAV.GUILayer
 
             if (cmbCategoria.Text == string.Empty)
             {
+                lblCategoriaIncorrecta.Text = "Seleccione una categoria!";
                 lblCategoriaIncorrecta.Visible = true;
                 cmbCategoria.Focus();
                 validacion = false;
             }
             else
-                lblCategoriaIncorrecta.Visible = false;
+            {
+                if (cmbCategoria.FindStringExact(cmbCategoria.Text) != -1)
+                {
+                    lblCategoriaIncorrecta.Visible = false;
+                }
+                else
+                {
+                    lblCategoriaIncorrecta.Text = "La categoria ingresada no existe";
+                    lblCategoriaIncorrecta.Visible = true;
+                    validacion = false;
+                }
+            };
 
             return validacion;
         }

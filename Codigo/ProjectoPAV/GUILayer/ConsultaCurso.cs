@@ -87,6 +87,7 @@ namespace ProjectoPAV.GUILayer
         private void ConsultaCurso_Load(object sender, EventArgs e)
         {
             LlenarCombo(cmbCategoria, DataManager.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
+            txtFecha.Select(0, 0);
         }
 
 
@@ -200,6 +201,12 @@ namespace ProjectoPAV.GUILayer
                 chbBorrados.CheckState = CheckState.Checked;
             else
                 chbBorrados.CheckState = CheckState.Unchecked;
+        }
+
+        private void txtFecha_Click(object sender, EventArgs e)
+        {
+            //txtFecha.Select(0, 0);
+            txtFecha.SelectionStart = 0;
         }
     }
 }

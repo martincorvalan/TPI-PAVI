@@ -107,6 +107,7 @@ namespace ProjectoPAV.DataAccessLayer
                                             ",[descripcion] = @descripcion ",
                                             ",[fecha_vigencia] = @fecha ",
                                             ",[id_categoria] = @id_categoria ",
+                                            ",[borrado] = @borrado ",
                                             "WHERE id_curso = @id_curso"
                                              );
 
@@ -114,7 +115,14 @@ namespace ProjectoPAV.DataAccessLayer
             param.Add("nombre", oCurso.nombre);
             param.Add("Descripcion", oCurso.descripcion);
             param.Add("fecha", oCurso.fecha);
-            param.Add("id_categoria", oCurso.categoria.id_categoria);     
+            param.Add("id_categoria", oCurso.categoria.id_categoria);
+            if(oCurso.borrado == "Activo")
+                param.Add("borrado", 0);
+            else
+                param.Add("borrado", 1);
+
+
+
 
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
