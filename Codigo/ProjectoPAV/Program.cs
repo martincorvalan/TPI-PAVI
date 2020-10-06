@@ -18,7 +18,7 @@ namespace ProjectoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("asd"));
+            Application.Run(new Load());
         }
     }
 }
