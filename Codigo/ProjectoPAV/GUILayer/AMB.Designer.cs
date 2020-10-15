@@ -81,7 +81,7 @@
             this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(158, 122);
+            this.txtDescripcion.Location = new System.Drawing.Point(158, 115);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(174, 13);
             this.txtDescripcion.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategoria.ForeColor = System.Drawing.Color.White;
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(158, 234);
+            this.cmbCategoria.Location = new System.Drawing.Point(158, 230);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(174, 21);
             this.cmbCategoria.TabIndex = 4;
@@ -106,7 +106,7 @@
             this.lblNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNombre.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(95, 62);
+            this.lblNombre.Location = new System.Drawing.Point(95, 66);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(50, 15);
             this.lblNombre.TabIndex = 6;
@@ -130,7 +130,7 @@
             this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.White;
-            this.lblFecha.Location = new System.Drawing.Point(50, 182);
+            this.lblFecha.Location = new System.Drawing.Point(56, 175);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(89, 15);
             this.lblFecha.TabIndex = 8;
@@ -142,7 +142,7 @@
             this.lblCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblCategoria.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(85, 236);
+            this.lblCategoria.Location = new System.Drawing.Point(85, 232);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(60, 15);
             this.lblCategoria.TabIndex = 9;
@@ -154,7 +154,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(98, 286);
+            this.btnAceptar.Location = new System.Drawing.Point(98, 340);
             this.btnAceptar.MaximumSize = new System.Drawing.Size(86, 30);
             this.btnAceptar.MinimumSize = new System.Drawing.Size(86, 30);
             this.btnAceptar.Name = "btnAceptar";
@@ -169,7 +169,7 @@
             this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFecha.ForeColor = System.Drawing.Color.White;
-            this.txtFecha.Location = new System.Drawing.Point(147, 183);
+            this.txtFecha.Location = new System.Drawing.Point(147, 175);
             this.txtFecha.Mask = "00/00/0000";
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(174, 13);
@@ -183,7 +183,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(235, 286);
+            this.btnCancelar.Location = new System.Drawing.Point(235, 340);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 30);
             this.btnCancelar.TabIndex = 6;
@@ -209,7 +209,7 @@
             this.lblCategoriaIncorrecta.AutoSize = true;
             this.lblCategoriaIncorrecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblCategoriaIncorrecta.ForeColor = System.Drawing.Color.Red;
-            this.lblCategoriaIncorrecta.Location = new System.Drawing.Point(177, 218);
+            this.lblCategoriaIncorrecta.Location = new System.Drawing.Point(177, 214);
             this.lblCategoriaIncorrecta.Name = "lblCategoriaIncorrecta";
             this.lblCategoriaIncorrecta.Size = new System.Drawing.Size(131, 13);
             this.lblCategoriaIncorrecta.TabIndex = 19;
@@ -221,7 +221,7 @@
             this.lblFechaIncorrecta.AutoSize = true;
             this.lblFechaIncorrecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblFechaIncorrecta.ForeColor = System.Drawing.Color.Red;
-            this.lblFechaIncorrecta.Location = new System.Drawing.Point(196, 161);
+            this.lblFechaIncorrecta.Location = new System.Drawing.Point(196, 153);
             this.lblFechaIncorrecta.Name = "lblFechaIncorrecta";
             this.lblFechaIncorrecta.Size = new System.Drawing.Size(96, 13);
             this.lblFechaIncorrecta.TabIndex = 18;
@@ -238,7 +238,7 @@
             // panel2
             // 
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(158, 141);
+            this.panel2.Location = new System.Drawing.Point(158, 134);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(174, 1);
             this.panel2.TabIndex = 21;
@@ -246,7 +246,7 @@
             // panel3
             // 
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(158, 197);
+            this.panel3.Location = new System.Drawing.Point(158, 189);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(174, 1);
             this.panel3.TabIndex = 22;
@@ -262,7 +262,7 @@
             this.lblDarAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.lblDarAlta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarAlta.ForeColor = System.Drawing.Color.White;
-            this.lblDarAlta.Location = new System.Drawing.Point(79, 347);
+            this.lblDarAlta.Location = new System.Drawing.Point(93, 287);
             this.lblDarAlta.Name = "lblDarAlta";
             this.lblDarAlta.Size = new System.Drawing.Size(52, 15);
             this.lblDarAlta.TabIndex = 23;
@@ -272,7 +272,7 @@
             // chbDarAlta
             // 
             this.chbDarAlta.AutoSize = true;
-            this.chbDarAlta.Location = new System.Drawing.Point(147, 347);
+            this.chbDarAlta.Location = new System.Drawing.Point(157, 287);
             this.chbDarAlta.Name = "chbDarAlta";
             this.chbDarAlta.Size = new System.Drawing.Size(15, 14);
             this.chbDarAlta.TabIndex = 24;

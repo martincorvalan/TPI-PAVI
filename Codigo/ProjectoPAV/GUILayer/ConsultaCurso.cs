@@ -52,15 +52,15 @@ namespace ProjectoPAV.GUILayer
 
             dgvCursos.Columns[2].Name = "Fecha";
             dgvCursos.Columns[2].DataPropertyName = "fecha";
-            dgvCursos.Columns[2].Width = 70;
+            dgvCursos.Columns[2].Width = 90;
 
             dgvCursos.Columns[3].Name = "Categoria";
             dgvCursos.Columns[3].DataPropertyName = "categoria";
             dgvCursos.Columns[3].Width = 120;
 
-            dgvCursos.Columns[4].Name = "Estado";
+            dgvCursos.Columns[4].Name = " ";
             dgvCursos.Columns[4].DataPropertyName = "borrado";
-            dgvCursos.Columns[4].Width = 50;
+            dgvCursos.Columns[4].Width = 23;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
@@ -186,13 +186,17 @@ namespace ProjectoPAV.GUILayer
 
         private void dgvCursos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (this.dgvCursos.Columns[e.ColumnIndex].Name == "Estado")
+            if (this.dgvCursos.Columns[e.ColumnIndex].Name == " ")
+            {
                 if ((string)e.Value == "Borrado")
                 {
                     e.CellStyle.BackColor = Color.FromArgb(211, 110, 112);
                     e.CellStyle.ForeColor = Color.White;
                     e.CellStyle.SelectionBackColor = Color.FromArgb(211, 110, 112);
                 }
+                e.Value = "";
+            }
+           
         }
 
         private void lblBorradosCheck_Click(object sender, EventArgs e)
