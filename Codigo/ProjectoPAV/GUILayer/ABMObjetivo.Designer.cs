@@ -48,7 +48,7 @@
             this.txtNombreLargo.Location = new System.Drawing.Point(160, 123);
             this.txtNombreLargo.Name = "txtNombreLargo";
             this.txtNombreLargo.Size = new System.Drawing.Size(174, 13);
-            this.txtNombreLargo.TabIndex = 40;
+            this.txtNombreLargo.TabIndex = 2;
             // 
             // panel2
             // 
@@ -81,7 +81,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(248, 216);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(86, 30);
-            this.btnCancelar.TabIndex = 35;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -97,7 +97,7 @@
             this.btnAceptar.MinimumSize = new System.Drawing.Size(86, 30);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(86, 30);
-            this.btnAceptar.TabIndex = 34;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -147,7 +147,7 @@
             this.txtNombreCorto.Location = new System.Drawing.Point(160, 61);
             this.txtNombreCorto.Name = "txtNombreCorto";
             this.txtNombreCorto.Size = new System.Drawing.Size(174, 13);
-            this.txtNombreCorto.TabIndex = 41;
+            this.txtNombreCorto.TabIndex = 1;
             // 
             // ABMObjetivo
             // 
@@ -163,6 +163,7 @@
             this.Controls.Add(this.lblNombreLArgo);
             this.Controls.Add(this.lblNombreCorto);
             this.Controls.Add(this.background);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ABMObjetivo";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.AgregarObjetivo_Load);

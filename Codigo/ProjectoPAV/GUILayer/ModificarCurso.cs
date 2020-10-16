@@ -75,7 +75,7 @@ namespace ProjectoPAV.GUILayer
 
         private void ModificarCurso_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cmbCategoria, DataManager.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
+            LlenarCombo(cmbCategoria, DataManagerT.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
         }
     }
 }

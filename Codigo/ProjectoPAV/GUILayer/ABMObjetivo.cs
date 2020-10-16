@@ -17,17 +17,22 @@ namespace ProjectoPAV.GUILayer
         private FormMode formMode = FormMode.agregar;
         private readonly ObjetivoService objetivoService;
         private Objetivo oObjetivoSel;
+        private Curso oCursoSel;
+        private BindingList<Objetivo> objetivos;
         public ABMObjetivo()
         {
             InitializeComponent();
             objetivoService = new ObjetivoService();
+            objetivos = new BindingList<Objetivo>();
+            oCursoSel = new Curso();
         }
 
         public enum FormMode
         {
             agregar,
             modificar,
-            eliminar
+            eliminar,
+            agregarACurso
         }
 
 
@@ -37,6 +42,12 @@ namespace ProjectoPAV.GUILayer
             oObjetivoSel = objetivoSel;
         }
 
+        public void InicializarForm(FormMode opcion, Curso curso)
+        {
+            formMode = opcion;
+            oCursoSel = curso;
+        }
+
         private void AgregarObjetivo_Load(object sender, EventArgs e)
         {
             switch (formMode)
@@ -44,12 +55,14 @@ namespace ProjectoPAV.GUILayer
                 case FormMode.agregar:
                     {
                         this.Text = "Registrar Objetivo";
+                        this.btnCancelar.Text = "Cancelar";
                         break;
                     }
                 case FormMode.modificar:
                     {
                         this.Text = "Modificar Objetivo";
                         MostrarDatos();
+                        this.btnCancelar.Text = "Cancelar";
                         break;
                     }
                 case FormMode.eliminar:
@@ -58,6 +71,13 @@ namespace ProjectoPAV.GUILayer
                         MostrarDatos();
                         txtNombreCorto.Enabled = false;
                         txtNombreLargo.Enabled = false;
+                        this.btnCancelar.Text = "Cancelar";
+                        break;
+                    }
+                case FormMode.agregarACurso:
+                    {
+                        this.Text = "Registrar Objetivo";
+                        this.btnCancelar.Text = "Terminar";
                         break;
                     }
 
@@ -100,6 +120,8 @@ namespace ProjectoPAV.GUILayer
         {
             this.Close();
         }
+
+
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -158,7 +180,31 @@ namespace ProjectoPAV.GUILayer
 
                     }
                     break;
+
+                case FormMode.agregarACurso:
+                    {
+                        if (ValidarCampos())
+                        {
+                            Objetivo oObjetivo = new Objetivo();
+
+                            oObjetivo.nombre_corto = txtNombreCorto.Text;
+                            oObjetivo.nombre_largo = txtNombreLargo.Text;
+
+                            objetivos.Add(oObjetivo);
+                            LimpiarTextBox();
+                            
+                            
+                        }
+
+
+                        break;
+                    }
             }
+        }
+
+        public BindingList<Objetivo> GetObjetivos()
+        {
+            return objetivos;
         }
     }
 }

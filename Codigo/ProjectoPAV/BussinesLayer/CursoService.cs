@@ -37,5 +37,15 @@ namespace ProjectoPAV.BussinesLayer
         {
             return cursoDao.Modificar(oCurso);
         }
+
+        internal bool ValidarDatos(Curso oCurso)
+        {
+            if (oCurso.objetivos.Count == 0)
+            {
+                throw new Exception("Debe ingresar al menos un objetivo.");
+            }
+
+            return true;
+        }
     }
 }

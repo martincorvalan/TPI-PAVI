@@ -72,7 +72,7 @@ namespace ProjectoPAV
 
                 //Creamos un data table con el resultado de la consulta utilizando el data manager
 
-                DataTable queryResult = DataManager.GetInstance().ConsultaSQL(sqlQuery);
+                DataTable queryResult = DataManagerT.GetInstance().ConsultaSQL(sqlQuery);
 
 
                 //Verifica que la consulta haya devuelto alguna fila

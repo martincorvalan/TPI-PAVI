@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -15,6 +16,9 @@ namespace ProjectoPAV.Entities
         public DateTime fecha { get; set; }
         public Categoria categoria { get; set; }
         public string borrado { get; set; }
+
+        public BindingList<Objetivo> objetivos { get; set; }
+
 
 
 

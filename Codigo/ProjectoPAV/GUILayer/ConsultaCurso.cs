@@ -86,7 +86,7 @@ namespace ProjectoPAV.GUILayer
 
         private void ConsultaCurso_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cmbCategoria, DataManager.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
+            LlenarCombo(cmbCategoria, DataManagerT.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
             txtFecha.Select(0, 0);
         }
 

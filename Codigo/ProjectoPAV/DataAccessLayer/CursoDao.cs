@@ -76,27 +76,65 @@ namespace ProjectoPAV.DataAccessLayer
 
         public bool Insert(Curso oCurso)
         {
-            var param = new Dictionary<string, object>();
-            String sqlQuery = string.Concat("INSERT INTO [dbo].[Cursos] ",
-                                            "([nombre] ",
-                                            ",[descripcion] ",
-                                            ",[fecha_vigencia] ",
-                                            ",[id_categoria] ",
-                                            ",[borrado]) ",
-                                            "VALUES ",
-                                            "(@nombre ",
-                                            ", @descripcion ",
-                                            ", @fecha " ,
-                                            ", @id_categoria ",
-                                            ", 0)");
+            DataManagerT dm = new DataManagerT();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
 
-            param.Add("id_curso", oCurso.id_curso);
-            param.Add("nombre", oCurso.nombre);
-            param.Add("Descripcion", oCurso.descripcion);
-            param.Add("fecha", oCurso.fecha);
-            param.Add("id_categoria", oCurso.categoria.id_categoria);
+                var param = new Dictionary<string, object>();
+                String sqlQuery = string.Concat("INSERT INTO [dbo].[Cursos] ",
+                                                "([nombre] ",
+                                                ",[descripcion] ",
+                                                ",[fecha_vigencia] ",
+                                                ",[id_categoria] ",
+                                                ",[borrado]) ",
+                                                "VALUES ",
+                                                "(@nombre ",
+                                                ", @descripcion ",
+                                                ", @fecha ",
+                                                ", @id_categoria ",
+                                                ", 0)");
 
-            return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
+                param.Add("id_curso", oCurso.id_curso);
+                param.Add("nombre", oCurso.nombre);
+                param.Add("Descripcion", oCurso.descripcion);
+                param.Add("fecha", oCurso.fecha);
+                param.Add("id_categoria", oCurso.categoria.id_categoria);
+                
+
+                foreach (var itemObjetivo in oCurso.objetivos)
+                {
+                    String sqlQueryObjetivos = string.Concat("INSERT INTO [dbo].[Objetivos] ",
+                                                "([nombre_corto] ",
+                                                ",[nombre_largo] ",
+                                                ",[borrado]) ",
+                                                "VALUES ",
+                                                "(@nombreC ",
+                                                ", @nombreL ",
+                                                ", 0)");
+                    var paramObjetivos = new Dictionary<string, object>();
+                    paramObjetivos.Add("nombreC", itemObjetivo.nombre_corto);
+                    paramObjetivos.Add("nombreL", itemObjetivo.nombre_largo);
+
+                    dm.EjecutarSQL(sqlQueryObjetivos, paramObjetivos);
+                }
+                dm.EjecutarSQL(sqlQuery, param);
+
+                dm.Commit();
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+
+            return true;
         }
 
         public bool Modificar(Curso oCurso)

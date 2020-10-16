@@ -33,7 +33,7 @@ namespace ProjectoPAV.GUILayer
 
         private void AgregarCurso_Load(object sender, EventArgs e)
         {
-            LlenarCombo(cmbCategoria, DataManager.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
+            LlenarCombo(cmbCategoria, DataManagerT.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
 
             switch (formMode)
             {
@@ -80,19 +80,29 @@ namespace ProjectoPAV.GUILayer
             {
                 case FormMode.agregar:
                     {
-                        if (ValidarCampos())
+                        try
                         {
-                            Curso oCurso = new Curso();
-                            oCurso.categoria = new Categoria();
-                            oCurso.nombre = txtNombre.Text;
-                            oCurso.descripcion = txtDescripcion.Text;
-                            oCurso.fecha = Convert.ToDateTime(txtFecha.Text);
-                            oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
+                            if (ValidarCampos())
+                            {
+                                Curso oCurso = new Curso();
+                                oCurso.categoria = new Categoria();
+                                oCurso.nombre = txtNombre.Text;
+                                oCurso.descripcion = txtDescripcion.Text;
+                                oCurso.fecha = Convert.ToDateTime(txtFecha.Text);
+                                oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
+                                AgregarObjetivo(oCurso);
 
-                            var resultado = cursoService.AgregarCurso(oCurso);
-                            LimpiarTextBox();
-                            this.Close();
-
+                                if (cursoService.ValidarDatos(oCurso))
+                                {
+                                    var resultado = cursoService.AgregarCurso(oCurso);
+                                    LimpiarTextBox();
+                                    this.Close();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al registrar el curso " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
 
@@ -240,6 +250,14 @@ namespace ProjectoPAV.GUILayer
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AgregarObjetivo(Curso oCurso)
+        {
+            ABMObjetivo agregar = new ABMObjetivo();
+            agregar.InicializarForm(ABMObjetivo.FormMode.agregarACurso, oCurso);
+            agregar.ShowDialog();
+            oCurso.objetivos = agregar.GetObjetivos();
         }
     }
 }
