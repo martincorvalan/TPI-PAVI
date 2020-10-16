@@ -50,7 +50,9 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblDarAlta = new System.Windows.Forms.Label();
             this.chbDarAlta = new System.Windows.Forms.CheckBox();
+            this.bugTrackerGrupo9DataSet1 = new ProjectoPAV.BugTrackerGrupo9DataSet();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // background
@@ -279,7 +281,12 @@
             this.chbDarAlta.UseVisualStyleBackColor = true;
             this.chbDarAlta.Visible = false;
             // 
-            // AMB
+            // bugTrackerGrupo9DataSet1
+            // 
+            this.bugTrackerGrupo9DataSet1.DataSetName = "BugTrackerGrupo9DataSet";
+            this.bugTrackerGrupo9DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ABMCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,12 +314,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(432, 403);
             this.MinimumSize = new System.Drawing.Size(432, 403);
-            this.Name = "AMB";
+            this.Name = "ABMCurso";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarCurso";
             this.Load += new System.EventHandler(this.AgregarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +348,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.CheckBox chbDarAlta;
         private System.Windows.Forms.Label lblDarAlta;
+        private BugTrackerGrupo9DataSet bugTrackerGrupo9DataSet1;
     }
 }

@@ -100,10 +100,10 @@
     <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso.Designer.cs">
       <DependentUpon>ObjetivosCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.cs">
+    <Compile Include="GUILayer\ABMC Objetivo\ConsultaObjetivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.Designer.cs">
+    <Compile Include="GUILayer\ABMC Objetivo\ConsultaObjetivo.Designer.cs">
       <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\ABMC Categoria\ABMCategoria.cs">
@@ -112,10 +112,10 @@
     <Compile Include="GUILayer\ABMC Categoria\ABMCategoria.Designer.cs">
       <DependentUpon>ABMCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMC Objeivo\ABMObjetivo.cs">
+    <Compile Include="GUILayer\ABMC Objetivo\ABMObjetivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC Objeivo\ABMObjetivo.Designer.cs">
+    <Compile Include="GUILayer\ABMC Objetivo\ABMObjetivo.Designer.cs">
       <DependentUpon>ABMObjetivo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Inicio\Menu.cs">
@@ -123,12 +123,6 @@
     </Compile>
     <Compile Include="GUILayer\Inicio\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUILayer\ABMC Curso\ModificarCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUILayer\ABMC Curso\ModificarCurso.Designer.cs">
-      <DependentUpon>ModificarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Inicio\Login.cs">
       <SubType>Form</SubType>
@@ -150,7 +144,7 @@
     <EmbeddedResource Include="GUILayer\ABMC Curso\ObjetivosCurso.resx">
       <DependentUpon>ObjetivosCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Objeivo\ABMObjetivo.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Objetivo\ABMObjetivo.resx">
       <DependentUpon>ABMObjetivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ABMC Curso\ABMCurso.resx">
@@ -162,7 +156,7 @@
     <EmbeddedResource Include="GUILayer\ABMC Curso\ConsultaCurso.resx">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Objetivo\ConsultaObjetivo.resx">
       <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Inicio\Menu.resx">
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Inicio\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Curso\ModificarCurso.resx">
-      <DependentUpon>ModificarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

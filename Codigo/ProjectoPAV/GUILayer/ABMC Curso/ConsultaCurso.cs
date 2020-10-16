@@ -108,8 +108,7 @@ namespace ProjectoPAV.GUILayer
             if (dgvCursos.CurrentCell.ColumnIndex == 4)
             {
                 var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
-                int id_curso = curso.id_curso;
-                ObjetivosCurso objXcurso = new ObjetivosCurso(id_curso);
+                ObjetivosCurso objXcurso = new ObjetivosCurso(curso);
                 objXcurso.ShowDialog();
             }
         }

@@ -123,9 +123,43 @@
   <metadata name="bugTrackerGrupo9DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>192, 17</value>
   </metadata>
+  <metadata name="bugTrackerGrupo9DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>192, 17</value>
+  </metadata>
   <metadata name="objetivosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>568, 17</value>
   </metadata>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>742, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>866, 17</value>
+  </metadata>
+  <metadata name="guna2Elipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>990, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFCAYAAABSIVz6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAABlJREFUKFNj+P///4BgGIPeYARbTGf8nwEAEdYUCVNqag4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAhRJREFUSEvF179P1WAUxnF+CAMJYWJhYHLgj2CADUYGFhZJIDEuMjOz82OEkLCZ
+        IIqjxsSwMumik5uD/4AhBDBcv0/taU7fnja9lwZO8onc09M+Wnvfvgz1er0n4T+s4g1GXa8LIzjBC9cr
+        ghX6F6pTdBU+jEOo7vES2TEbOIOvt+gifBe+DpAds4FxnMPXQ8N34OsYugPZcT9YF/4Mfq6NbfiqPDt+
+        WLoIfw1fH1A5v/Qhp/D38NU2fAN6iKw+QderzFYauUHC12DfDNUFJhDN1gZLFK6nPwpfgQ+9xCTSuULY
+        dBT+Dr7S8CXcwOobpuCvUxE2E03hC7hSI68fmEZ0nZKwGYjCv+DP/x+z+okZROdXhM0aY0jDrX5hFtF5
+        obDZQOGf4esac4jma4XNBs/xG2npTugvFZ0TCps1dCt1S61u8z+t+goPmwE9NHp4rPRQzSN9q7UOD5sJ
+        fT2+w0pfn0XomEKicH0L0uuUhE1HC8FXWGmhWIafGSg8bOa05Gnps9KSqKUxmtVi0ld42IQWdy3yVgrV
+        SyCaNX2FVxrQ4EdY6TW3iWg2pXC9xXzpRVMJL32ATkw3AltI55q0CvcnaGuiLYovbWH8TFtRuP5BRbgN
+        ahOmzZgvbdbs+CAaw21oH7724C8yKN3FNFyfi+BXsL3SEYptaAd8+B30y0Pp/3gd+lXjIXvpOvb8ZKGS
+        DjyS3tA/HU9UZDET53IAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="objetivoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
