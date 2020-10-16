@@ -60,7 +60,7 @@ namespace ProjectoPAV.GUILayer
                         txtNombre.Enabled = false;
                         txtDescripcion.Enabled = false;
                         cmbCategoria.Enabled = false;
-                        txtFecha.Enabled = false;
+                        dtpFecha.Enabled = false;
                         break;
                     }
 
@@ -88,7 +88,7 @@ namespace ProjectoPAV.GUILayer
                                 oCurso.categoria = new Categoria();
                                 oCurso.nombre = txtNombre.Text;
                                 oCurso.descripcion = txtDescripcion.Text;
-                                oCurso.fecha = Convert.ToDateTime(txtFecha.Text);
+                                oCurso.fecha = Convert.ToDateTime(dtpFecha.Value);
                                 oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
                                 AgregarObjetivo(oCurso);
 
@@ -115,7 +115,7 @@ namespace ProjectoPAV.GUILayer
                         {
                             oCursoSel.nombre = txtNombre.Text;
                             oCursoSel.descripcion = txtDescripcion.Text;
-                            oCursoSel.fecha = Convert.ToDateTime(txtFecha.Text);
+                            oCursoSel.fecha = Convert.ToDateTime(dtpFecha.Value);
                             oCursoSel.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
                             if (chbDarAlta.Visible == true)
                                 oCursoSel.borrado = chbDarAlta.Checked ? "Activo" : "Borrado";
@@ -164,14 +164,14 @@ namespace ProjectoPAV.GUILayer
             else
                 lblFaltaNombre.Visible = false;
 
-            if (!EsFecha(txtFecha.Text))
-            {
+            //if (!EsFecha(dtpFecha.Value))
+            //{
 
-                lblFechaIncorrecta.Visible = true;
-                txtFecha.Focus();
-                validacion = false;
-            }
-            else
+            //    lblFechaIncorrecta.Visible = true;
+            //    txtFecha.Focus();
+            //    validacion = false;
+            //}
+            //else
                 lblFechaIncorrecta.Visible = false;
 
             if (cmbCategoria.Text == string.Empty)
@@ -230,7 +230,7 @@ namespace ProjectoPAV.GUILayer
         {
             txtNombre.Text = String.Empty;
             txtDescripcion.Text = String.Empty;
-            txtFecha.Text = String.Empty;
+            //dtpFecha.Value = String.Empty;
             cmbCategoria.ResetText(); 
         }
 
@@ -238,7 +238,7 @@ namespace ProjectoPAV.GUILayer
         {
             txtNombre.Text = oCursoSel.nombre;
             txtDescripcion.Text = oCursoSel.descripcion;
-            txtFecha.Text = oCursoSel.fecha.ToString("dd/MM/yyyy");
+            //dtpFecha.Value = oCursoSel.fecha.ToString("dd/MM/yyyy");
             cmbCategoria.Text = oCursoSel.categoria.nombre;
         }
 

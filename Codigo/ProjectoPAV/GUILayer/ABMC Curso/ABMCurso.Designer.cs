@@ -39,20 +39,17 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblFaltaNombre = new System.Windows.Forms.Label();
             this.lblCategoriaIncorrecta = new System.Windows.Forms.Label();
             this.lblFechaIncorrecta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblDarAlta = new System.Windows.Forms.Label();
             this.chbDarAlta = new System.Windows.Forms.CheckBox();
-            this.bugTrackerGrupo9DataSet1 = new ProjectoPAV.BugTrackerGrupo9DataSet();
+            this.dtpFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // background
@@ -166,18 +163,6 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFecha.ForeColor = System.Drawing.Color.White;
-            this.txtFecha.Location = new System.Drawing.Point(147, 175);
-            this.txtFecha.Mask = "00/00/0000";
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(174, 13);
-            this.txtFecha.TabIndex = 3;
-            this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
@@ -245,14 +230,6 @@
             this.panel2.Size = new System.Drawing.Size(174, 1);
             this.panel2.TabIndex = 21;
             // 
-            // panel3
-            // 
-            this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(158, 189);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(174, 1);
-            this.panel3.TabIndex = 22;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 22;
@@ -281,26 +258,42 @@
             this.chbDarAlta.UseVisualStyleBackColor = true;
             this.chbDarAlta.Visible = false;
             // 
-            // bugTrackerGrupo9DataSet1
+            // dtpFecha
             // 
-            this.bugTrackerGrupo9DataSet1.DataSetName = "BugTrackerGrupo9DataSet";
-            this.bugTrackerGrupo9DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dtpFecha.AutoRoundedCorners = true;
+            this.dtpFecha.BackColor = System.Drawing.Color.Transparent;
+            this.dtpFecha.BorderRadius = 13;
+            this.dtpFecha.CheckedState.Parent = this.dtpFecha;
+            this.dtpFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
+            this.dtpFecha.Font = new System.Drawing.Font("Calibri", 9F);
+            this.dtpFecha.ForeColor = System.Drawing.Color.White;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.HoverState.Parent = this.dtpFecha;
+            this.dtpFecha.Location = new System.Drawing.Point(157, 171);
+            this.dtpFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.ShadowDecoration.Parent = this.dtpFecha;
+            this.dtpFecha.Size = new System.Drawing.Size(175, 27);
+            this.dtpFecha.TabIndex = 25;
+            this.dtpFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtpFecha.UseTransparentBackground = true;
+            this.dtpFecha.Value = new System.DateTime(2020, 10, 23, 0, 0, 0, 0);
             // 
             // ABMCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 403);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.chbDarAlta);
             this.Controls.Add(this.lblDarAlta);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCategoriaIncorrecta);
             this.Controls.Add(this.lblFechaIncorrecta);
             this.Controls.Add(this.lblFaltaNombre);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblFecha);
@@ -320,7 +313,6 @@
             this.Text = "AgregarCurso";
             this.Load += new System.EventHandler(this.AgregarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,17 +329,15 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.MaskedTextBox txtFecha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblFaltaNombre;
         private System.Windows.Forms.Label lblCategoriaIncorrecta;
         private System.Windows.Forms.Label lblFechaIncorrecta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.CheckBox chbDarAlta;
         private System.Windows.Forms.Label lblDarAlta;
-        private BugTrackerGrupo9DataSet bugTrackerGrupo9DataSet1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpFecha;
     }
 }

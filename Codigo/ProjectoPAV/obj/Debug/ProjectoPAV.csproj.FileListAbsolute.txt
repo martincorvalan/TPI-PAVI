@@ -32,7 +32,6 @@ C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.pdb
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaCurso.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaCurso.resources
-C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ModificarCurso.resources
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\bak proyecto pav\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe.config
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\bak proyecto pav\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\bak proyecto pav\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.pdb
@@ -79,3 +78,23 @@ C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMCurso.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaCategoria.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaObjetivo.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe.config
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.exe
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\bin\Debug\ProjectoPAV.pdb
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMCategoria.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.ObjetivosCurso.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMObjetivo.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMCurso.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaCategoria.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaCurso.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ConsultaObjetivo.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.Menu.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Load.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Login.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Properties.Resources.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.GenerateResource.cache
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CoreCompileInputs.cache
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.exe
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\proyecto pav backup del backup\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.pdb

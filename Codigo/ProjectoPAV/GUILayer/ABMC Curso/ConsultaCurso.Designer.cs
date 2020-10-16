@@ -40,9 +40,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.PictureBox();
@@ -53,6 +51,7 @@
             this.chbBorrados = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.dtpFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -182,32 +181,12 @@
             this.lblFecha.TabIndex = 11;
             this.lblFecha.Text = "Fecha";
             // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
-            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFecha.ForeColor = System.Drawing.Color.White;
-            this.txtFecha.Location = new System.Drawing.Point(130, 225);
-            this.txtFecha.Mask = "00/00/0000";
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(100, 13);
-            this.txtFecha.TabIndex = 2;
-            this.txtFecha.ValidatingType = typeof(System.DateTime);
-            this.txtFecha.Click += new System.EventHandler(this.txtFecha_Click);
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(102, 187);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(121, 1);
             this.panel1.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(102, 239);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(121, 1);
-            this.panel2.TabIndex = 14;
             // 
             // guna2Elipse1
             // 
@@ -323,11 +302,35 @@
             this.lblCantidad.TabIndex = 23;
             this.lblCantidad.Text = " ";
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.AutoRoundedCorners = true;
+            this.dtpFecha.BackColor = System.Drawing.Color.Transparent;
+            this.dtpFecha.BorderRadius = 12;
+            this.dtpFecha.CheckedState.Parent = this.dtpFecha;
+            this.dtpFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.dtpFecha.Font = new System.Drawing.Font("Calibri", 9F);
+            this.dtpFecha.ForeColor = System.Drawing.Color.White;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.HoverState.Parent = this.dtpFecha;
+            this.dtpFecha.Location = new System.Drawing.Point(102, 222);
+            this.dtpFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.ShadowDecoration.Parent = this.dtpFecha;
+            this.dtpFecha.ShowCheckBox = true;
+            this.dtpFecha.Size = new System.Drawing.Size(121, 27);
+            this.dtpFecha.TabIndex = 2;
+            this.dtpFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtpFecha.UseTransparentBackground = true;
+            this.dtpFecha.Value = new System.DateTime(2020, 10, 23, 0, 0, 0, 0);
+            // 
             // ConsultaCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 676);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chbBorrados);
@@ -337,9 +340,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblNombre);
@@ -370,9 +371,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.MaskedTextBox txtFecha;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvCursos;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.PictureBox btnAdd;
@@ -384,5 +383,6 @@
         private System.Windows.Forms.CheckBox chbBorrados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCantidad;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpFecha;
     }
 }

@@ -92,7 +92,6 @@ namespace ProjectoPAV.GUILayer
         private void ConsultaCurso_Load(object sender, EventArgs e)
         {
             LlenarCombo(cmbCategoria, DataManagerT.GetInstance().ConsultaSQL("SELECT * FROM Categorias"), "nombre", "id_categoria");
-            txtFecha.Select(0, 0);
         }
 
 
@@ -120,15 +119,15 @@ namespace ProjectoPAV.GUILayer
 
             Dictionary<string, object> filtros = new Dictionary<string, object>();
 
-            DateTime fecha;
+            //DateTime fecha;
 
             if (txtNombre.Text != string.Empty)
             {
                 filtros.Add("Nombre", txtNombre.Text);
             }
 
-            if (DateTime.TryParse(txtFecha.Text, out fecha))
-                filtros.Add("Fecha", fecha);
+            if (dtpFecha.Checked == true)
+                filtros.Add("Fecha", dtpFecha.Value);
 
             if (!string.IsNullOrEmpty(cmbCategoria.Text))
             {
@@ -231,10 +230,10 @@ namespace ProjectoPAV.GUILayer
                 chbBorrados.CheckState = CheckState.Unchecked;
         }
 
-        private void txtFecha_Click(object sender, EventArgs e)
-        {
-            //txtFecha.Select(0, 0);
-            txtFecha.SelectionStart = 0;
-        }
+        //private void txtFecha_Click(object sender, EventArgs e)
+        //{
+        //    //txtFecha.Select(0, 0);
+        //    txtFecha.SelectionStart = 0;
+        //}
     }
 }
