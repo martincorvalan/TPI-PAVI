@@ -176,6 +176,7 @@
             this.Controls.Add(this.background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ABMCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMCategoria";
             this.Load += new System.EventHandler(this.AgregarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();

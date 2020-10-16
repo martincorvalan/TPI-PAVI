@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BugTrackerGrupo9DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BugTrackerGrupo9DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BussinesLayer\CategoriaService.cs" />
     <Compile Include="BussinesLayer\CursoService.cs" />
     <Compile Include="BussinesLayer\ObjetivoService.cs" />
@@ -71,96 +76,105 @@
     <Compile Include="Entities\Objetivo.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="GUILayer\AMB.cs">
+    <Compile Include="GUILayer\ABMC Curso\ABMCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\AMB.Designer.cs">
-      <DependentUpon>AMB.cs</DependentUpon>
+    <Compile Include="GUILayer\ABMC Curso\ABMCurso.Designer.cs">
+      <DependentUpon>ABMCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ConsultaCurso.cs">
+    <Compile Include="GUILayer\ABMC Curso\ConsultaCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ConsultaCurso.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\ConsultaCurso.Designer.cs">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ConsultaCategoria.cs">
+    <Compile Include="GUILayer\ABMC Categoria\ConsultaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ConsultaCategoria.Designer.cs">
+    <Compile Include="GUILayer\ABMC Categoria\ConsultaCategoria.Designer.cs">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ConsultaObjetivo.cs">
+    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ConsultaObjetivo.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso.Designer.cs">
+      <DependentUpon>ObjetivosCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.Designer.cs">
       <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMCategoria.cs">
+    <Compile Include="GUILayer\ABMC Categoria\ABMCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMCategoria.Designer.cs">
+    <Compile Include="GUILayer\ABMC Categoria\ABMCategoria.Designer.cs">
       <DependentUpon>ABMCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMObjetivo.cs">
+    <Compile Include="GUILayer\ABMC Objeivo\ABMObjetivo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMObjetivo.Designer.cs">
+    <Compile Include="GUILayer\ABMC Objeivo\ABMObjetivo.Designer.cs">
       <DependentUpon>ABMObjetivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\Menu.cs">
+    <Compile Include="GUILayer\Inicio\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\Menu.Designer.cs">
+    <Compile Include="GUILayer\Inicio\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ModificarCurso.cs">
+    <Compile Include="GUILayer\ABMC Curso\ModificarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ModificarCurso.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\ModificarCurso.Designer.cs">
       <DependentUpon>ModificarCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\Login.cs">
+    <Compile Include="GUILayer\Inicio\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\Login.Designer.cs">
+    <Compile Include="GUILayer\Inicio\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\Load.cs">
+    <Compile Include="GUILayer\Inicio\Load.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\Load.Designer.cs">
+    <Compile Include="GUILayer\Inicio\Load.Designer.cs">
       <DependentUpon>Load.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUILayer\ABMCategoria.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Categoria\ABMCategoria.resx">
       <DependentUpon>ABMCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMObjetivo.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\ObjetivosCurso.resx">
+      <DependentUpon>ObjetivosCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ABMC Objeivo\ABMObjetivo.resx">
       <DependentUpon>ABMObjetivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\AMB.resx">
-      <DependentUpon>AMB.cs</DependentUpon>
+    <EmbeddedResource Include="GUILayer\ABMC Curso\ABMCurso.resx">
+      <DependentUpon>ABMCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ConsultaCategoria.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Categoria\ConsultaCategoria.resx">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ConsultaCurso.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\ConsultaCurso.resx">
       <DependentUpon>ConsultaCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ConsultaObjetivo.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Objeivo\ConsultaObjetivo.resx">
       <DependentUpon>ConsultaObjetivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Menu.resx">
+    <EmbeddedResource Include="GUILayer\Inicio\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Load.resx">
+    <EmbeddedResource Include="GUILayer\Inicio\Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\Login.resx">
+    <EmbeddedResource Include="GUILayer\Inicio\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ModificarCurso.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\ModificarCurso.resx">
       <DependentUpon>ModificarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -172,6 +186,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BugTrackerGrupo9DataSet.xsc">
+      <DependentUpon>BugTrackerGrupo9DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BugTrackerGrupo9DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BugTrackerGrupo9DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BugTrackerGrupo9DataSet.xss">
+      <DependentUpon>BugTrackerGrupo9DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ProjectoPAV.Entities.Objetivo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

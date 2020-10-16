@@ -165,6 +165,7 @@
             this.Controls.Add(this.background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ABMObjetivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.AgregarObjetivo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();

@@ -1,6 +1,7 @@
 ﻿using ProjectoPAV.BussinesLayer;
 using ProjectoPAV.DataAccessLayer;
 using ProjectoPAV.Entities;
+using ProjectoPAV.GUILayer.ABMC_Curso;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace ProjectoPAV.GUILayer
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvCursos.ColumnCount = 5;
+            dgvCursos.ColumnCount = 6;
             dgvCursos.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -48,7 +49,7 @@ namespace ProjectoPAV.GUILayer
 
             dgvCursos.Columns[1].Name = "Descripción";
             dgvCursos.Columns[1].DataPropertyName = "descripcion";
-            dgvCursos.Columns[1].Width = 120;
+            dgvCursos.Columns[1].Width = 150;
 
             dgvCursos.Columns[2].Name = "Fecha";
             dgvCursos.Columns[2].DataPropertyName = "fecha";
@@ -58,9 +59,13 @@ namespace ProjectoPAV.GUILayer
             dgvCursos.Columns[3].DataPropertyName = "categoria";
             dgvCursos.Columns[3].Width = 120;
 
-            dgvCursos.Columns[4].Name = " ";
-            dgvCursos.Columns[4].DataPropertyName = "borrado";
-            dgvCursos.Columns[4].Width = 23;
+            dgvCursos.Columns[4].Name = "Objetivos";
+            dgvCursos.Columns[4].DataPropertyName = "objetivo";
+            dgvCursos.Columns[4].Width = 60;
+
+            dgvCursos.Columns[5].Name = " ";
+            dgvCursos.Columns[5].DataPropertyName = "borrado";
+            dgvCursos.Columns[5].Width = 23;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
@@ -100,6 +105,13 @@ namespace ProjectoPAV.GUILayer
         {
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
+            if (dgvCursos.CurrentCell.ColumnIndex == 4)
+            {
+                var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+                int id_curso = curso.id_curso;
+                ObjetivosCurso objXcurso = new ObjetivosCurso(id_curso);
+                objXcurso.ShowDialog();
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -143,6 +155,19 @@ namespace ProjectoPAV.GUILayer
 
             dgvCursos.DataSource = listadoCursos;
 
+
+            for (int i = 0; i < dgvCursos.Rows.Count; i++)
+            {
+                dgvCursos.Rows[i].Cells["Objetivos"].Value = "           ...";
+
+            }
+
+            //foreach (int headers in dgvCursos.Rows)
+            //{
+            //    dgvCursos.Rows[0].Cells[5].Value = "...";
+
+            //}
+
             lblCantidad.Text = dgvCursos.Rows.Count.ToString();
 
             /*if (dgvCursos.Rows.Count == 0)
@@ -156,9 +181,9 @@ namespace ProjectoPAV.GUILayer
         {
             if (dgvCursos.CurrentCell != null)
             {
-                AMB frmABM = new AMB();
+                ABMCurso frmABM = new ABMCurso();
                 var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
-                frmABM.InicializarForm(AMB.FormMode.modificar, curso);
+                frmABM.InicializarForm(ABMCurso.FormMode.modificar, curso);
                 frmABM.ShowDialog();
                 btnSearch_Click(sender, e);
             }
@@ -169,9 +194,9 @@ namespace ProjectoPAV.GUILayer
         {
             if (dgvCursos.CurrentCell != null)
             {
-                AMB frmABM = new AMB();
+                ABMCurso frmABM = new ABMCurso();
                 var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
-                frmABM.InicializarForm(AMB.FormMode.eliminar, curso);
+                frmABM.InicializarForm(ABMCurso.FormMode.eliminar, curso);
                 frmABM.ShowDialog();
                 btnSearch_Click(sender, e);
             }
@@ -179,7 +204,7 @@ namespace ProjectoPAV.GUILayer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AMB agregar = new AMB();
+            ABMCurso agregar = new ABMCurso();
             agregar.ShowDialog();
             btnSearch_Click(sender, e);
         }

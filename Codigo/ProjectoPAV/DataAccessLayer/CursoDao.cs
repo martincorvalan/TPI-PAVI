@@ -101,7 +101,11 @@ namespace ProjectoPAV.DataAccessLayer
                 param.Add("Descripcion", oCurso.descripcion);
                 param.Add("fecha", oCurso.fecha);
                 param.Add("id_categoria", oCurso.categoria.id_categoria);
-                
+
+                dm.EjecutarSQL(sqlQuery, param);
+
+                //var paramObjxCurso = new Dictionary<string, object>();
+                //paramObjxCurso.Add("id_curso", oCurso.id_curso);
 
                 foreach (var itemObjetivo in oCurso.objetivos)
                 {
@@ -118,8 +122,20 @@ namespace ProjectoPAV.DataAccessLayer
                     paramObjetivos.Add("nombreL", itemObjetivo.nombre_largo);
 
                     dm.EjecutarSQL(sqlQueryObjetivos, paramObjetivos);
+
+                    String sqlObjXCurso = string.Concat("INSERT INTO [dbo].[ObjetivosCursos] ",
+                                               "([id_objetivo] ",
+                                               ",[id_curso] ",
+                                               ",[puntos] ",
+                                               ",[borrado]) ",
+                                               "VALUES ",
+                                               "(@@IDENTITY ",
+                                               ", ident_current('Cursos') ",
+                                               ", 4 ",
+                                               ", 0 )");
+                    dm.EjecutarSQL(sqlObjXCurso, param);
+
                 }
-                dm.EjecutarSQL(sqlQuery, param);
 
                 dm.Commit();
             }
@@ -180,7 +196,6 @@ namespace ProjectoPAV.DataAccessLayer
                     nombre = row["nomcat"].ToString(),
                     id_categoria = Convert.ToInt32(row["id_categoria"].ToString())
                 }
-
             };
 
             return oCurso;

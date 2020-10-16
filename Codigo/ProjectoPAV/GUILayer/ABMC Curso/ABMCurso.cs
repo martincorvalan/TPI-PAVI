@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace ProjectoPAV.GUILayer
 {
-    public partial class AMB : Form
+    public partial class ABMCurso : Form
    {
         private FormMode formMode = FormMode.agregar;
         private readonly CursoService cursoService;
         private Curso oCursoSel;
-        public AMB()
+        public ABMCurso()
         {
             InitializeComponent();
             cursoService = new CursoService();
