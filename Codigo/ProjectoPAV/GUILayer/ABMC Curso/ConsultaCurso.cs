@@ -28,7 +28,7 @@ namespace ProjectoPAV.GUILayer
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
-            dgvCursos.ColumnCount = 6;
+            dgvCursos.ColumnCount = 7;
             dgvCursos.ColumnHeadersVisible = true;
 
             // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
@@ -53,19 +53,23 @@ namespace ProjectoPAV.GUILayer
 
             dgvCursos.Columns[2].Name = "Fecha";
             dgvCursos.Columns[2].DataPropertyName = "fecha";
-            dgvCursos.Columns[2].Width = 90;
+            dgvCursos.Columns[2].Width = 70;
 
             dgvCursos.Columns[3].Name = "Categoria";
             dgvCursos.Columns[3].DataPropertyName = "categoria";
-            dgvCursos.Columns[3].Width = 120;
+            dgvCursos.Columns[3].Width = 90;
 
             dgvCursos.Columns[4].Name = "Objetivos";
             dgvCursos.Columns[4].DataPropertyName = "objetivo";
             dgvCursos.Columns[4].Width = 60;
 
-            dgvCursos.Columns[5].Name = " ";
-            dgvCursos.Columns[5].DataPropertyName = "borrado";
-            dgvCursos.Columns[5].Width = 23;
+            dgvCursos.Columns[5].Name = "Usuarios";
+            dgvCursos.Columns[5].DataPropertyName = "usuarios";
+            dgvCursos.Columns[5].Width = 60;
+
+            dgvCursos.Columns[6].Name = " ";
+            dgvCursos.Columns[6].DataPropertyName = "borrado";
+            dgvCursos.Columns[6].Width = 23;
 
             // Cambia el tamaño de la altura de los encabezados de columna.
             dgvCursos.AutoResizeColumnHeadersHeight();
@@ -109,6 +113,12 @@ namespace ProjectoPAV.GUILayer
                 var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
                 ObjetivosCurso objXcurso = new ObjetivosCurso(curso);
                 objXcurso.ShowDialog();
+            }
+            if (dgvCursos.CurrentCell.ColumnIndex == 5)
+            {
+                var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+                UsuariosCurso UsrXcurso = new UsuariosCurso(curso);
+                UsrXcurso.ShowDialog();
             }
         }
 

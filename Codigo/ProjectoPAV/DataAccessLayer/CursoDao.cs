@@ -181,6 +181,73 @@ namespace ProjectoPAV.DataAccessLayer
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
 
+
+        public bool InsertUsuarios(int idcurso, List<int> usuarios)
+        {
+            DataManagerT dm = new DataManagerT();
+            DateTime fecha = DateTime.Now;
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+                
+                foreach (int idUsr in usuarios)
+                {
+
+                    var param = new Dictionary<string, Object>();
+                    String sqlQuery = string.Concat("INSERT INTO [dbo].[UsuariosCurso] ",
+                                                    "([id_usuario] ",
+                                                    ",[id_curso] ",
+                                                    ",[puntuacion] ",
+                                                    ",[observaciones] ",
+                                                    ",[fecha_inicio] ",
+                                                    ",[fecha_fin]) ",
+                                                    "VALUES ",
+                                                    "(@id_usuario ",
+                                                    ", @id_curso ",
+                                                    ", 5 ",
+                                                    ", 'nada' ",
+                                                    ", @fecha ",
+                                                    ", @fecha)",
+
+                                                    "INSERT INTO [dbo].[UsuariosCursoAvance] ",
+                                                    "([id_usuario] ",
+                                                    ",[id_curso] ",
+                                                    ",[inicio] ",
+                                                    ",[fin] ",
+                                                    ",[porc_avance]) ",
+                                                    "VALUES ",
+                                                    "(@id_usuario ",
+                                                    ", @id_curso ",
+                                                    ", @fecha ",
+                                                    ", @fecha ",
+                                                    ", 1)");
+
+                    param.Add("id_usuario", idUsr);
+                    param.Add("id_curso", idcurso);
+                    param.Add("fecha", fecha);
+
+                    dm.EjecutarSQL(sqlQuery, param);
+                }
+
+                dm.Commit();
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+
+            return true;
+
+        }
+
+
         private Curso ObjectMapping(DataRow row)
         {
             Curso oCurso = new Curso

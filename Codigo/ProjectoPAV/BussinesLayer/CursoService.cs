@@ -47,5 +47,9 @@ namespace ProjectoPAV.BussinesLayer
 
             return true;
         }
+        public bool AgregarUsuarios(int idcurso, List<int> usuarios )
+        {
+            return cursoDao.InsertUsuarios(idcurso, usuarios);
+        }
     }
 }
