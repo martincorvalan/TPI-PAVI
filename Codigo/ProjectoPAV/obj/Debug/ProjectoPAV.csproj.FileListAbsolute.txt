@@ -106,3 +106,4 @@ C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILaye
 C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.UsuariosCurso.resources
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.ABMUsuariosCurso.resources
+C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.DetalleUsuarios.resources

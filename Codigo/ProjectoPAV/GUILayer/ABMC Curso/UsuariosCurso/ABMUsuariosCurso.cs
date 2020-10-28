@@ -27,18 +27,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
 
         private void ABMUsuariosCurso_Load(object sender, EventArgs e)
         {
-
             consultarUsuariosNoInscriptos();
-            //// TODO: esta línea de código carga datos en la tabla 'bugTrackerGrupo9DataSet3.Usuarios' Puede moverla o quitarla según sea necesario.
-            //this.usuariosTableAdapter3.Fill(this.bugTrackerGrupo9DataSet3.Usuarios);
-            //// TODO: esta línea de código carga datos en la tabla 'bugTrackerGrupo9DataSet2.Usuarios' Puede moverla o quitarla según sea necesario.
-            //this.usuariosTableAdapter2.Fill(this.bugTrackerGrupo9DataSet2.Usuarios);
-            //// TODO: esta línea de código carga datos en la tabla 'bugTrackerGrupo9DataSet1.Usuarios' Puede moverla o quitarla según sea necesario.
-            //this.usuariosTableAdapter1.Fill(this.bugTrackerGrupo9DataSet1.Usuarios);
-            //// TODO: esta línea de código carga datos en la tabla 'usuarios._Usuarios' Puede moverla o quitarla según sea necesario.
-            //this.usuariosTableAdapter.Fill(this.usuarios._Usuarios);
-
-
         }
 
 
@@ -67,7 +56,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
         private void btnAdd_Click(object sender, EventArgs e)
         {
             List<int> usuarios = new List<int>();
-            foreach (DataGridViewRow r in dgvUsuarios.Rows)
+            foreach (DataGridViewRow r in dgvUsuariosDelCurso.Rows)
             {
                 bool isChecked = Convert.ToBoolean(r.Cells[3].Value);
                 if (isChecked)
@@ -93,28 +82,10 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
 
         private void dgvUsuarios_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
-            if (dgvUsuarios.IsCurrentCellDirty)
+            if (dgvUsuariosDelCurso.IsCurrentCellDirty)
             {
-                dgvUsuarios.CommitEdit(DataGridViewDataErrorContexts.Commit);
+                dgvUsuariosDelCurso.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
-        }
-
-        private void consultaUsuariosToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.usuariosTableAdapter.consultaUsuarios(this.usuarios._Usuarios);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void usuariosNoInscriptosToolStripButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -69,15 +69,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BugTrackerGrupo9DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BugTrackerGrupo9DataSet2.Designer.cs">
+    <Compile Include="BugTrackerGrupo9DataSetUsuariosPorCurso.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BugTrackerGrupo9DataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BugTrackerGrupo9DataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BugTrackerGrupo9DataSet3.xsd</DependentUpon>
+      <DependentUpon>BugTrackerGrupo9DataSetUsuariosPorCurso.xsd</DependentUpon>
     </Compile>
     <Compile Include="BussinesLayer\CategoriaService.cs" />
     <Compile Include="BussinesLayer\CursoService.cs" />
@@ -94,10 +89,16 @@
     <Compile Include="Entities\Objetivo.cs" />
     <Compile Include="Entities\Perfil.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="GUILayer\ABMC Curso\ABMUsuariosCurso.cs">
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\DetalleUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC Curso\ABMUsuariosCurso.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\DetalleUsuarios.Designer.cs">
+      <DependentUpon>DetalleUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\ABMUsuariosCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\ABMUsuariosCurso.Designer.cs">
       <DependentUpon>ABMUsuariosCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\ABMC Curso\ABMCurso.cs">
@@ -118,16 +119,16 @@
     <Compile Include="GUILayer\ABMC Categoria\ConsultaCategoria.Designer.cs">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso.cs">
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\UsuariosCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\UsuariosCurso\UsuariosCurso.Designer.cs">
       <DependentUpon>UsuariosCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso.cs">
+    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso\ObjetivosCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso.Designer.cs">
+    <Compile Include="GUILayer\ABMC Curso\ObjetivosCurso\ObjetivosCurso.Designer.cs">
       <DependentUpon>ObjetivosCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\ABMC Objetivo\ConsultaObjetivo.cs">
@@ -176,13 +177,16 @@
     <EmbeddedResource Include="GUILayer\ABMC Categoria\ABMCategoria.resx">
       <DependentUpon>ABMCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Curso\ABMUsuariosCurso.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\UsuariosCurso\DetalleUsuarios.resx">
+      <DependentUpon>DetalleUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ABMC Curso\UsuariosCurso\ABMUsuariosCurso.resx">
       <DependentUpon>ABMUsuariosCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Curso\UsuariosCurso.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\UsuariosCurso\UsuariosCurso.resx">
       <DependentUpon>UsuariosCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC Curso\ObjetivosCurso.resx">
+    <EmbeddedResource Include="GUILayer\ABMC Curso\ObjetivosCurso\ObjetivosCurso.resx">
       <DependentUpon>ObjetivosCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\ABMC Objetivo\ABMObjetivo.resx">
@@ -240,27 +244,16 @@
     <None Include="BugTrackerGrupo9DataSet1.xss">
       <DependentUpon>BugTrackerGrupo9DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="BugTrackerGrupo9DataSet2.xsc">
-      <DependentUpon>BugTrackerGrupo9DataSet2.xsd</DependentUpon>
+    <None Include="BugTrackerGrupo9DataSetUsuariosPorCurso.xsc">
+      <DependentUpon>BugTrackerGrupo9DataSetUsuariosPorCurso.xsd</DependentUpon>
     </None>
-    <None Include="BugTrackerGrupo9DataSet2.xsd">
+    <None Include="BugTrackerGrupo9DataSetUsuariosPorCurso.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BugTrackerGrupo9DataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>BugTrackerGrupo9DataSetUsuariosPorCurso.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BugTrackerGrupo9DataSet2.xss">
-      <DependentUpon>BugTrackerGrupo9DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BugTrackerGrupo9DataSet3.xsc">
-      <DependentUpon>BugTrackerGrupo9DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="BugTrackerGrupo9DataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BugTrackerGrupo9DataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BugTrackerGrupo9DataSet3.xss">
-      <DependentUpon>BugTrackerGrupo9DataSet3.xsd</DependentUpon>
+    <None Include="BugTrackerGrupo9DataSetUsuariosPorCurso.xss">
+      <DependentUpon>BugTrackerGrupo9DataSetUsuariosPorCurso.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\ProjectoPAV.Entities.Objetivo.datasource" />
     <None Include="Properties\Settings.settings">

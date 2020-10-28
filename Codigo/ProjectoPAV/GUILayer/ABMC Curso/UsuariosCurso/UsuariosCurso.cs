@@ -26,15 +26,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
 
         private void UsuariosCurso_Load(object sender, EventArgs e)
         {
-            try
-            {
-                this.objetivosTableAdapter.objetivos_x_curso1(this.bugTrackerGrupo9DataSet.Objetivos, oCurso.id_curso);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
+            usuariosInscriptos();
         }
 
 
@@ -64,6 +56,27 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
         {
             ABMUsuariosCurso agregarUsr = new ABMUsuariosCurso(oCurso);
             agregarUsr.ShowDialog();
+            usuariosInscriptos();
+        }
+
+        private void usuariosInscriptos()
+        {
+            try
+            {
+                this.usuariosTableAdapter1.UsuariosInscriptos(this.bugTrackerGrupo9DataSetUsuariosPorCurso.Usuarios, oCurso.id_curso);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvUsuariosCurso_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvUsuariosCurso.CurrentCell.ColumnIndex == 3)
+            {
+                
+            }
         }
     }
 }

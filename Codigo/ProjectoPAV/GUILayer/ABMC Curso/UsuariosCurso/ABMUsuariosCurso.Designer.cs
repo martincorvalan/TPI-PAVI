@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMUsuariosCurso));
             this.background = new System.Windows.Forms.PictureBox();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvUsuariosDelCurso = new System.Windows.Forms.DataGridView();
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bugTrackerGrupo9DataSet1 = new ProjectoPAV.BugTrackerGrupo9DataSet1();
             this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,24 +49,20 @@
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.PictureBox();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarios = new ProjectoPAV.Usuarios();
-            this.usuariosTableAdapter = new ProjectoPAV.UsuariosTableAdapters.UsuariosTableAdapter();
-            this.bugTrackerGrupo9DataSet2 = new ProjectoPAV.BugTrackerGrupo9DataSet2();
-            this.usuariosTableAdapter2 = new ProjectoPAV.BugTrackerGrupo9DataSet2TableAdapters.UsuariosTableAdapter();
-            this.usuariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bugTrackerGrupo9DataSet3 = new ProjectoPAV.BugTrackerGrupo9DataSet3();
-            this.usuariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter3 = new ProjectoPAV.BugTrackerGrupo9DataSet3TableAdapters.UsuariosTableAdapter();
             this.usuariosTableAdapter1 = new ProjectoPAV.BugTrackerGrupo9DataSet1TableAdapters.UsuariosTableAdapter();
             this.objetivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agregar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seleccionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borradoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosDelCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).BeginInit();
@@ -75,12 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,26 +88,30 @@
             this.background.TabIndex = 1;
             this.background.TabStop = false;
             // 
-            // dgvUsuarios
+            // dgvUsuariosDelCurso
             // 
-            this.dgvUsuarios.AllowUserToAddRows = false;
-            this.dgvUsuarios.AllowUserToDeleteRows = false;
-            this.dgvUsuarios.AllowUserToResizeColumns = false;
-            this.dgvUsuarios.AllowUserToResizeRows = false;
-            this.dgvUsuarios.AutoGenerateColumns = false;
-            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvUsuarios.ColumnHeadersHeight = 25;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUsuariosDelCurso.AllowUserToAddRows = false;
+            this.dgvUsuariosDelCurso.AllowUserToDeleteRows = false;
+            this.dgvUsuariosDelCurso.AllowUserToResizeColumns = false;
+            this.dgvUsuariosDelCurso.AllowUserToResizeRows = false;
+            this.dgvUsuariosDelCurso.AutoGenerateColumns = false;
+            this.dgvUsuariosDelCurso.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.dgvUsuariosDelCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUsuariosDelCurso.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvUsuariosDelCurso.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvUsuariosDelCurso.ColumnHeadersHeight = 25;
+            this.dgvUsuariosDelCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvUsuariosDelCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_usuario,
+            this.usuario,
+            this.email,
+            this.agregar,
+            this.idusuarioDataGridViewTextBoxColumn,
             this.usuarioDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.seleccionado,
+            this.estadoDataGridViewTextBoxColumn,
             this.borradoDataGridViewCheckBoxColumn});
-            this.dgvUsuarios.DataSource = this.usuariosBindingSource1;
+            this.dgvUsuariosDelCurso.DataSource = this.usuariosBindingSource1;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,12 +119,12 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsuarios.GridColor = System.Drawing.Color.White;
-            this.dgvUsuarios.Location = new System.Drawing.Point(50, 84);
-            this.dgvUsuarios.MaximumSize = new System.Drawing.Size(343, 300);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvUsuariosDelCurso.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuariosDelCurso.GridColor = System.Drawing.Color.White;
+            this.dgvUsuariosDelCurso.Location = new System.Drawing.Point(50, 84);
+            this.dgvUsuariosDelCurso.MaximumSize = new System.Drawing.Size(343, 300);
+            this.dgvUsuariosDelCurso.Name = "dgvUsuariosDelCurso";
+            this.dgvUsuariosDelCurso.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,13 +132,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarios.RowHeadersWidth = 30;
-            this.dgvUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvUsuarios.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvUsuarios.Size = new System.Drawing.Size(331, 289);
-            this.dgvUsuarios.TabIndex = 2;
-            this.dgvUsuarios.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvUsuarios_CurrentCellDirtyStateChanged);
+            this.dgvUsuariosDelCurso.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuariosDelCurso.RowHeadersWidth = 30;
+            this.dgvUsuariosDelCurso.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvUsuariosDelCurso.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvUsuariosDelCurso.Size = new System.Drawing.Size(331, 289);
+            this.dgvUsuariosDelCurso.TabIndex = 2;
+            this.dgvUsuariosDelCurso.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvUsuarios_CurrentCellDirtyStateChanged);
             // 
             // usuariosBindingSource1
             // 
@@ -177,7 +172,7 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.BorderRadius = 22;
-            this.guna2Elipse2.TargetControl = this.dgvUsuarios;
+            this.guna2Elipse2.TargetControl = this.dgvUsuariosDelCurso;
             // 
             // guna2Elipse3
             // 
@@ -266,47 +261,10 @@
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.usuarios;
-            // 
             // usuarios
             // 
             this.usuarios.DataSetName = "Usuarios";
             this.usuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // bugTrackerGrupo9DataSet2
-            // 
-            this.bugTrackerGrupo9DataSet2.DataSetName = "BugTrackerGrupo9DataSet2";
-            this.bugTrackerGrupo9DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosTableAdapter2
-            // 
-            this.usuariosTableAdapter2.ClearBeforeFill = true;
-            // 
-            // usuariosBindingSource2
-            // 
-            this.usuariosBindingSource2.DataMember = "Usuarios";
-            this.usuariosBindingSource2.DataSource = this.bugTrackerGrupo9DataSet2;
-            // 
-            // bugTrackerGrupo9DataSet3
-            // 
-            this.bugTrackerGrupo9DataSet3.DataSetName = "BugTrackerGrupo9DataSet3";
-            this.bugTrackerGrupo9DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource3
-            // 
-            this.usuariosBindingSource3.DataMember = "Usuarios";
-            this.usuariosBindingSource3.DataSource = this.bugTrackerGrupo9DataSet3;
-            // 
-            // usuariosTableAdapter3
-            // 
-            this.usuariosTableAdapter3.ClearBeforeFill = true;
             // 
             // usuariosTableAdapter1
             // 
@@ -324,35 +282,56 @@
             this.id_usuario.ReadOnly = true;
             this.id_usuario.Visible = false;
             // 
+            // usuario
+            // 
+            this.usuario.DataPropertyName = "usuario";
+            this.usuario.HeaderText = "usuario";
+            this.usuario.Name = "usuario";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.Width = 150;
+            // 
+            // agregar
+            // 
+            this.agregar.DataPropertyName = "borrado";
+            this.agregar.HeaderText = "Agregar";
+            this.agregar.Name = "agregar";
+            this.agregar.Width = 50;
+            // 
+            // idusuarioDataGridViewTextBoxColumn
+            // 
+            this.idusuarioDataGridViewTextBoxColumn.DataPropertyName = "id_usuario";
+            this.idusuarioDataGridViewTextBoxColumn.HeaderText = "id_usuario";
+            this.idusuarioDataGridViewTextBoxColumn.Name = "idusuarioDataGridViewTextBoxColumn";
+            this.idusuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // usuarioDataGridViewTextBoxColumn
             // 
             this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "usuario";
-            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.HeaderText = "usuario";
             this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
-            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 150;
             // 
-            // seleccionado
+            // estadoDataGridViewTextBoxColumn
             // 
-            this.seleccionado.HeaderText = "";
-            this.seleccionado.Name = "seleccionado";
-            this.seleccionado.Width = 50;
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             // 
             // borradoDataGridViewCheckBoxColumn
             // 
             this.borradoDataGridViewCheckBoxColumn.DataPropertyName = "borrado";
             this.borradoDataGridViewCheckBoxColumn.HeaderText = "borrado";
             this.borradoDataGridViewCheckBoxColumn.Name = "borradoDataGridViewCheckBoxColumn";
-            this.borradoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.borradoDataGridViewCheckBoxColumn.Visible = false;
-            this.borradoDataGridViewCheckBoxColumn.Width = 50;
             // 
             // ABMUsuariosCurso
             // 
@@ -360,7 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(430, 450);
-            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.dgvUsuariosDelCurso);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblNombreCurso);
             this.Controls.Add(this.lblCurso);
@@ -372,7 +351,7 @@
             this.Text = "ABMUsuariosCurso";
             this.Load += new System.EventHandler(this.ABMUsuariosCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosDelCurso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).EndInit();
@@ -382,12 +361,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -397,7 +371,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox background;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvUsuariosDelCurso;
         private System.Windows.Forms.BindingSource objetivoBindingSource;
         private BugTrackerGrupo9DataSet bugTrackerGrupo9DataSet;
         private System.Windows.Forms.BindingSource objetivosBindingSource;
@@ -413,21 +387,17 @@
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.PictureBox btnAdd;
         private Usuarios usuarios;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private UsuariosTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
         private BugTrackerGrupo9DataSet1 bugTrackerGrupo9DataSet1;
         private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private BugTrackerGrupo9DataSet1TableAdapters.UsuariosTableAdapter usuariosTableAdapter1;
-        private BugTrackerGrupo9DataSet2 bugTrackerGrupo9DataSet2;
-        private BugTrackerGrupo9DataSet2TableAdapters.UsuariosTableAdapter usuariosTableAdapter2;
-        private System.Windows.Forms.BindingSource usuariosBindingSource2;
-        private BugTrackerGrupo9DataSet3 bugTrackerGrupo9DataSet3;
-        private System.Windows.Forms.BindingSource usuariosBindingSource3;
-        private BugTrackerGrupo9DataSet3TableAdapters.UsuariosTableAdapter usuariosTableAdapter3;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn agregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn seleccionado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn borradoDataGridViewCheckBoxColumn;
     }
 }

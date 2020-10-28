@@ -1,6 +1,6 @@
 ﻿namespace ProjectoPAV.GUILayer.ABMC_Curso
 {
-    partial class UsuariosCurso
+    partial class ObjetivosCurso
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosCurso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjetivosCurso));
             this.background = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nombrecortoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrelargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugTrackerGrupo9DataSet = new ProjectoPAV.BugTrackerGrupo9DataSet();
             this.objetivosTableAdapter = new ProjectoPAV.BugTrackerGrupo9DataSetTableAdapters.ObjetivosTableAdapter();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -52,17 +50,21 @@
             this.lblNombreCurso = new System.Windows.Forms.Label();
             this.lblDescripcionContenido = new System.Windows.Forms.Label();
             this.lblFechaContenido = new System.Windows.Forms.Label();
-            this.objetivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.bugTrackerGrupo9DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idobjetivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecortoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrelargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // background
@@ -92,8 +94,10 @@
             this.dataGridView1.ColumnHeadersHeight = 25;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idobjetivoDataGridViewTextBoxColumn,
             this.nombrecortoDataGridViewTextBoxColumn,
-            this.nombrelargoDataGridViewTextBoxColumn});
+            this.nombrelargoDataGridViewTextBoxColumn,
+            this.dataGridViewCheckBoxColumn1});
             this.dataGridView1.DataSource = this.objetivosBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
@@ -104,8 +108,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 126);
-            this.dataGridView1.MaximumSize = new System.Drawing.Size(343, 300);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 189);
+            this.dataGridView1.MaximumSize = new System.Drawing.Size(343, 215);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -120,31 +124,12 @@
             this.dataGridView1.RowHeadersWidth = 30;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(331, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(331, 215);
             this.dataGridView1.TabIndex = 2;
             // 
-            // nombrecortoDataGridViewTextBoxColumn
+            // clientesBindingSource
             // 
-            this.nombrecortoDataGridViewTextBoxColumn.DataPropertyName = "nombre_corto";
-            this.nombrecortoDataGridViewTextBoxColumn.HeaderText = "Nombre Corto";
-            this.nombrecortoDataGridViewTextBoxColumn.Name = "nombrecortoDataGridViewTextBoxColumn";
-            this.nombrecortoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombrecortoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nombrecortoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nombrelargoDataGridViewTextBoxColumn
-            // 
-            this.nombrelargoDataGridViewTextBoxColumn.DataPropertyName = "nombre_largo";
-            this.nombrelargoDataGridViewTextBoxColumn.HeaderText = "Nombre Largo";
-            this.nombrelargoDataGridViewTextBoxColumn.Name = "nombrelargoDataGridViewTextBoxColumn";
-            this.nombrelargoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombrelargoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nombrelargoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // objetivosBindingSource
-            // 
-            this.objetivosBindingSource.DataMember = "Objetivos";
-            this.objetivosBindingSource.DataSource = this.bugTrackerGrupo9DataSet;
+            this.clientesBindingSource.DataMember = "Clientes";
             // 
             // bugTrackerGrupo9DataSet
             // 
@@ -190,9 +175,9 @@
             this.nombreCabecera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.nombreCabecera.Location = new System.Drawing.Point(12, 5);
             this.nombreCabecera.Name = "nombreCabecera";
-            this.nombreCabecera.Size = new System.Drawing.Size(133, 19);
+            this.nombreCabecera.Size = new System.Drawing.Size(150, 19);
             this.nombreCabecera.TabIndex = 15;
-            this.nombreCabecera.Text = "Usuarios del curso";
+            this.nombreCabecera.Text = "Objectivos por Curso";
             // 
             // pictureBox2
             // 
@@ -234,7 +219,7 @@
             this.lblDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.lblDescripcion.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblDescripcion.Location = new System.Drawing.Point(47, 75);
+            this.lblDescripcion.Location = new System.Drawing.Point(47, 93);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(87, 18);
             this.lblDescripcion.TabIndex = 5;
@@ -246,7 +231,7 @@
             this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.lblFecha.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblFecha.Location = new System.Drawing.Point(47, 99);
+            this.lblFecha.Location = new System.Drawing.Point(47, 135);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(107, 18);
             this.lblFecha.TabIndex = 6;
@@ -270,7 +255,7 @@
             this.lblDescripcionContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.lblDescripcionContenido.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcionContenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblDescripcionContenido.Location = new System.Drawing.Point(140, 77);
+            this.lblDescripcionContenido.Location = new System.Drawing.Point(140, 95);
             this.lblDescripcionContenido.Name = "lblDescripcionContenido";
             this.lblDescripcionContenido.Size = new System.Drawing.Size(82, 15);
             this.lblDescripcionContenido.TabIndex = 8;
@@ -282,35 +267,56 @@
             this.lblFechaContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.lblFechaContenido.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaContenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblFechaContenido.Location = new System.Drawing.Point(160, 101);
+            this.lblFechaContenido.Location = new System.Drawing.Point(160, 137);
             this.lblFechaContenido.Name = "lblFechaContenido";
             this.lblFechaContenido.Size = new System.Drawing.Size(82, 15);
             this.lblFechaContenido.TabIndex = 9;
             this.lblFechaContenido.Text = "NombreCurso";
             // 
-            // objetivoBindingSource
+            // bugTrackerGrupo9DataSetBindingSource
             // 
-            this.objetivoBindingSource.DataSource = typeof(ProjectoPAV.Entities.Objetivo);
+            this.bugTrackerGrupo9DataSetBindingSource.DataSource = this.bugTrackerGrupo9DataSet;
+            this.bugTrackerGrupo9DataSetBindingSource.Position = 0;
             // 
-            // btnAdd
+            // objetivosBindingSource
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(339, 389);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(42, 40);
-            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.TabStop = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.objetivosBindingSource.DataMember = "Objetivos";
+            this.objetivosBindingSource.DataSource = this.bugTrackerGrupo9DataSetBindingSource;
             // 
-            // UsuariosCurso
+            // idobjetivoDataGridViewTextBoxColumn
+            // 
+            this.idobjetivoDataGridViewTextBoxColumn.DataPropertyName = "id_objetivo";
+            this.idobjetivoDataGridViewTextBoxColumn.HeaderText = "id_objetivo";
+            this.idobjetivoDataGridViewTextBoxColumn.Name = "idobjetivoDataGridViewTextBoxColumn";
+            this.idobjetivoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombrecortoDataGridViewTextBoxColumn
+            // 
+            this.nombrecortoDataGridViewTextBoxColumn.DataPropertyName = "nombre_corto";
+            this.nombrecortoDataGridViewTextBoxColumn.HeaderText = "nombre_corto";
+            this.nombrecortoDataGridViewTextBoxColumn.Name = "nombrecortoDataGridViewTextBoxColumn";
+            this.nombrecortoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombrelargoDataGridViewTextBoxColumn
+            // 
+            this.nombrelargoDataGridViewTextBoxColumn.DataPropertyName = "nombre_largo";
+            this.nombrelargoDataGridViewTextBoxColumn.HeaderText = "nombre_largo";
+            this.nombrelargoDataGridViewTextBoxColumn.Name = "nombrelargoDataGridViewTextBoxColumn";
+            this.nombrelargoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "borrado";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "borrado";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // ObjetivosCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(430, 450);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFechaContenido);
             this.Controls.Add(this.lblDescripcionContenido);
             this.Controls.Add(this.lblNombreCurso);
@@ -321,20 +327,20 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UsuariosCurso";
+            this.Name = "ObjetivosCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "UsuariosCurso";
-            this.Load += new System.EventHandler(this.UsuariosCurso_Load);
+            this.Text = "ObjetivosCurso";
+            this.Load += new System.EventHandler(this.ObjetivosCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,15 +350,11 @@
 
         private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource objetivoBindingSource;
         private BugTrackerGrupo9DataSet bugTrackerGrupo9DataSet;
-        private System.Windows.Forms.BindingSource objetivosBindingSource;
         private BugTrackerGrupo9DataSetTableAdapters.ObjetivosTableAdapter objetivosTableAdapter;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombrecortoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombrelargoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -363,6 +365,21 @@
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Label lblFechaContenido;
         private System.Windows.Forms.Label lblDescripcionContenido;
-        private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razonsocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn borradoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaaltaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idbarrioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcontactoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idobjetivoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrecortoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrelargoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.BindingSource objetivosBindingSource;
+        private System.Windows.Forms.BindingSource bugTrackerGrupo9DataSetBindingSource;
     }
 }

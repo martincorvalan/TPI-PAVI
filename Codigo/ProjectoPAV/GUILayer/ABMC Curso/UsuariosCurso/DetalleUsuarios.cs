@@ -1,4 +1,5 @@
-﻿using ProjectoPAV.Entities;
+﻿using ProjectoPAV.BussinesLayer;
+using ProjectoPAV.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,29 +13,18 @@ using System.Windows.Forms;
 
 namespace ProjectoPAV.GUILayer.ABMC_Curso
 {
-    public partial class ObjetivosCurso : Form
+    public partial class DetalleUsuarios : Form
     {
-        private Curso oCurso;
-        public ObjetivosCurso(Curso curso)
+        private readonly CursoService cursoService;
+        public DetalleUsuarios()
         {
             InitializeComponent();
-            oCurso = curso;
-            lblNombreCurso.Text = oCurso.nombre;
-            lblFechaContenido.Text = oCurso.fecha.ToString();
-            lblDescripcionContenido.Text = oCurso.descripcion;
+
+            lblNombreCurso.Text = "gola";
         }
 
-        private void ObjetivosCurso_Load(object sender, EventArgs e)
+        private void ABMUsuariosCurso_Load(object sender, EventArgs e)
         {
-            try
-            {
-                this.objetivosTableAdapter.objetivos_x_curso1(this.bugTrackerGrupo9DataSet.Objetivos, oCurso.id_curso);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
 
 
@@ -59,5 +49,6 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }
