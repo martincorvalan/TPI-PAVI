@@ -32,6 +32,25 @@ namespace ProjectoPAV.DataAccessLayer
             return listaObjetivo;
         }
 
+        public Objetivo ConsultarUltimoID()
+        {
+
+            String SqlQuery = string.Concat("SELECT id_objetivo",
+                                            "FROM Objetivos  ",
+                                            "WHERE id_objetivo = ident_current('Objetivos') AND borrado = 0 ");
+
+            var resQuery = DataManager.GetInstance().ConsultaSQL(SqlQuery);
+
+            Objetivo objetivo = new Objetivo();
+
+            foreach (DataRow row in resQuery.Rows)
+            {
+                objetivo = ObjectMapping(row);
+            }
+
+            return objetivo;
+        }
+
 
         public bool Insert(Objetivo oObjetivo)
         {
@@ -85,7 +104,6 @@ namespace ProjectoPAV.DataAccessLayer
 
         private Objetivo ObjectMapping(DataRow row)
         {
-
 
             Objetivo oObjetivo = new Objetivo
             {

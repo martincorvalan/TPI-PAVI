@@ -1,6 +1,7 @@
 ﻿using ProjectoPAV.BussinesLayer;
 using ProjectoPAV.DataAccessLayer;
 using ProjectoPAV.Entities;
+using ProjectoPAV.GUILayer.ABMC_Curso;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -90,7 +91,11 @@ namespace ProjectoPAV.GUILayer
                                 oCurso.descripcion = txtDescripcion.Text;
                                 oCurso.fecha = Convert.ToDateTime(dtpFecha.Value);
                                 oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
-                                AgregarObjetivo(oCurso);
+                                oCurso.objetivos = new BindingList<Objetivo>();
+                                ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso);
+                                formObjXCurso.ShowDialog();
+
+                                //AgregarObjetivo(oCurso);
 
                                 if (cursoService.ValidarDatos(oCurso))
                                 {

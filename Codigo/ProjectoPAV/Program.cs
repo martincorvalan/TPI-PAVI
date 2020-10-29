@@ -1,4 +1,6 @@
-﻿using ProjectoPAV.GUILayer;
+﻿using ProjectoPAV.Entities;
+using ProjectoPAV.GUILayer;
+using ProjectoPAV.GUILayer.ABMC_Curso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,7 @@ namespace ProjectoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("Guido"));
+            Application.Run(new Load());
         }
     }
 }

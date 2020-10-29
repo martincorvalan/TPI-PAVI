@@ -89,6 +89,7 @@
             // cmbCategoria
             // 
             this.cmbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCategoria.ForeColor = System.Drawing.Color.White;
             this.cmbCategoria.FormattingEnabled = true;
@@ -262,7 +263,7 @@
             // 
             this.dtpFecha.AutoRoundedCorners = true;
             this.dtpFecha.BackColor = System.Drawing.Color.Transparent;
-            this.dtpFecha.BorderRadius = 13;
+            this.dtpFecha.BorderRadius = 12;
             this.dtpFecha.CheckedState.Parent = this.dtpFecha;
             this.dtpFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.dtpFecha.Font = new System.Drawing.Font("Calibri", 9F);

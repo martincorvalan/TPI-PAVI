@@ -104,24 +104,43 @@ namespace ProjectoPAV.DataAccessLayer
 
                 dm.EjecutarSQL(sqlQuery, param);
 
-                //var paramObjxCurso = new Dictionary<string, object>();
-                //paramObjxCurso.Add("id_curso", oCurso.id_curso);
+
 
                 foreach (var itemObjetivo in oCurso.objetivos)
                 {
-                    String sqlQueryObjetivos = string.Concat("INSERT INTO [dbo].[Objetivos] ",
-                                                "([nombre_corto] ",
-                                                ",[nombre_largo] ",
-                                                ",[borrado]) ",
-                                                "VALUES ",
-                                                "(@nombreC ",
-                                                ", @nombreL ",
-                                                ", 0)");
-                    var paramObjetivos = new Dictionary<string, object>();
-                    paramObjetivos.Add("nombreC", itemObjetivo.nombre_corto);
-                    paramObjetivos.Add("nombreL", itemObjetivo.nombre_largo);
 
-                    dm.EjecutarSQL(sqlQueryObjetivos, paramObjetivos);
+                    if (itemObjetivo.id_objetivo == 0)
+                    {
+                        var paramObj = new Dictionary<string, object>();
+                        String sqlQueryObj = string.Concat("INSERT INTO [dbo].[Objetivos] ",
+                                                        "([nombre_corto] ",
+                                                        ",[nombre_largo] ",
+                                                        ",[borrado]) ",
+                                                        "VALUES ",
+                                                        "(@nombreC ",
+                                                        ", @nombreL ",
+                                                        ", 0) ",
+
+                                                       "INSERT INTO [dbo].[ObjetivosCursos] ",
+                                                       "([id_objetivo] ",
+                                                       ",[id_curso] ",
+                                                       ",[puntos] ",
+                                                       ",[borrado]) ",
+                                                       "VALUES ",
+                                                       "( ident_current('Objetivos')",
+                                                       ", ident_current('Cursos') ",
+                                                       ", 4 ",
+                                                       ", 0 )");
+
+                        paramObj.Add("nombreC", itemObjetivo.nombre_corto);
+                        paramObj.Add("nombreL", itemObjetivo.nombre_largo);
+
+                        dm.EjecutarSQL(sqlQueryObj, paramObj);
+                        continue;
+                    }
+
+                    var paramObjxCurso = new Dictionary<string, object>();
+                    paramObjxCurso.Add("id_objetivo", itemObjetivo.id_objetivo);
 
                     String sqlObjXCurso = string.Concat("INSERT INTO [dbo].[ObjetivosCursos] ",
                                                "([id_objetivo] ",
@@ -129,11 +148,11 @@ namespace ProjectoPAV.DataAccessLayer
                                                ",[puntos] ",
                                                ",[borrado]) ",
                                                "VALUES ",
-                                               "(@@IDENTITY ",
+                                               "( @id_objetivo",
                                                ", ident_current('Cursos') ",
                                                ", 4 ",
                                                ", 0 )");
-                    dm.EjecutarSQL(sqlObjXCurso, param);
+                    dm.EjecutarSQL(sqlObjXCurso, paramObjxCurso);
 
                 }
 
