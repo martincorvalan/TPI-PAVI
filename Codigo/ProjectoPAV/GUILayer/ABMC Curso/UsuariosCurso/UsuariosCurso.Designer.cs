@@ -34,6 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosCurso));
             this.background = new System.Windows.Forms.PictureBox();
             this.dgvUsuariosCurso = new System.Windows.Forms.DataGridView();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.porc_avance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosDelCursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ProjectoPAV.DataSet1();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugTrackerGrupo9DataSetUsuariosPorCursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugTrackerGrupo9DataSetUsuariosPorCurso = new ProjectoPAV.BugTrackerGrupo9DataSetUsuariosPorCurso();
@@ -57,19 +62,18 @@
             this.usuariosCursoTableAdapter = new ProjectoPAV.BugTrackerGrupo9DataSetUsuariosPorCursoTableAdapters.UsuariosCursoTableAdapter();
             this.usuariosCursoAvanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bugTrackerGrupo9DataSet1 = new ProjectoPAV.BugTrackerGrupo9DataSet1();
-            this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosDelCursoTableAdapter = new ProjectoPAV.DataSet1TableAdapters.UsuariosDelCursoTableAdapter();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.idusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idperfilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borradoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.idcursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.porcavanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosCurso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDelCursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetUsuariosPorCursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetUsuariosPorCurso)).BeginInit();
@@ -109,18 +113,16 @@
             this.dgvUsuariosCurso.ColumnHeadersHeight = 25;
             this.dgvUsuariosCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUsuariosCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_usuario,
             this.usuario,
             this.email,
-            this.detalle,
+            this.porc_avance,
             this.idusuarioDataGridViewTextBoxColumn,
-            this.idperfilDataGridViewTextBoxColumn,
             this.usuarioDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn,
-            this.borradoDataGridViewCheckBoxColumn});
-            this.dgvUsuariosCurso.DataSource = this.usuariosBindingSource;
+            this.borradoDataGridViewCheckBoxColumn,
+            this.idcursoDataGridViewTextBoxColumn,
+            this.porcavanceDataGridViewTextBoxColumn});
+            this.dgvUsuariosCurso.DataSource = this.usuariosDelCursoBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,6 +151,38 @@
             this.dgvUsuariosCurso.Size = new System.Drawing.Size(331, 251);
             this.dgvUsuariosCurso.TabIndex = 2;
             this.dgvUsuariosCurso.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuariosCurso_CellClick);
+            // 
+            // usuario
+            // 
+            this.usuario.DataPropertyName = "usuario";
+            this.usuario.HeaderText = "usuario";
+            this.usuario.MinimumWidth = 10;
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // porc_avance
+            // 
+            this.porc_avance.DataPropertyName = "porc_avance";
+            this.porc_avance.HeaderText = "avance";
+            this.porc_avance.Name = "porc_avance";
+            this.porc_avance.ReadOnly = true;
+            // 
+            // usuariosDelCursoBindingSource
+            // 
+            this.usuariosDelCursoBindingSource.DataMember = "UsuariosDelCurso";
+            this.usuariosDelCursoBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuariosBindingSource
             // 
@@ -297,7 +331,7 @@
             this.lblFechaContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.lblFechaContenido.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaContenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.lblFechaContenido.Location = new System.Drawing.Point(160, 101);
+            this.lblFechaContenido.Location = new System.Drawing.Point(161, 101);
             this.lblFechaContenido.Name = "lblFechaContenido";
             this.lblFechaContenido.Size = new System.Drawing.Size(82, 15);
             this.lblFechaContenido.TabIndex = 9;
@@ -337,33 +371,24 @@
             this.bugTrackerGrupo9DataSet1.DataSetName = "BugTrackerGrupo9DataSet1";
             this.bugTrackerGrupo9DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // id_usuario
+            // usuariosDelCursoTableAdapter
             // 
-            this.id_usuario.DataPropertyName = "id_usuario";
-            this.id_usuario.HeaderText = "id_usuario";
-            this.id_usuario.Name = "id_usuario";
-            this.id_usuario.ReadOnly = true;
-            this.id_usuario.Visible = false;
+            this.usuariosDelCursoTableAdapter.ClearBeforeFill = true;
             // 
-            // usuario
+            // btnActualizar
             // 
-            this.usuario.DataPropertyName = "usuario";
-            this.usuario.HeaderText = "usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // detalle
-            // 
-            this.detalle.HeaderText = "Detalle";
-            this.detalle.Name = "detalle";
-            this.detalle.ReadOnly = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(241, 394);
+            this.btnActualizar.MaximumSize = new System.Drawing.Size(86, 30);
+            this.btnActualizar.MinimumSize = new System.Drawing.Size(86, 30);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(86, 30);
+            this.btnActualizar.TabIndex = 17;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // idusuarioDataGridViewTextBoxColumn
             // 
@@ -371,15 +396,6 @@
             this.idusuarioDataGridViewTextBoxColumn.HeaderText = "id_usuario";
             this.idusuarioDataGridViewTextBoxColumn.Name = "idusuarioDataGridViewTextBoxColumn";
             this.idusuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idusuarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idperfilDataGridViewTextBoxColumn
-            // 
-            this.idperfilDataGridViewTextBoxColumn.DataPropertyName = "id_perfil";
-            this.idperfilDataGridViewTextBoxColumn.HeaderText = "id_perfil";
-            this.idperfilDataGridViewTextBoxColumn.Name = "idperfilDataGridViewTextBoxColumn";
-            this.idperfilDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idperfilDataGridViewTextBoxColumn.Visible = false;
             // 
             // usuarioDataGridViewTextBoxColumn
             // 
@@ -387,15 +403,6 @@
             this.usuarioDataGridViewTextBoxColumn.HeaderText = "usuario";
             this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
             this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usuarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -403,15 +410,6 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.estadoDataGridViewTextBoxColumn.Visible = false;
             // 
             // borradoDataGridViewCheckBoxColumn
             // 
@@ -419,7 +417,20 @@
             this.borradoDataGridViewCheckBoxColumn.HeaderText = "borrado";
             this.borradoDataGridViewCheckBoxColumn.Name = "borradoDataGridViewCheckBoxColumn";
             this.borradoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.borradoDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // idcursoDataGridViewTextBoxColumn
+            // 
+            this.idcursoDataGridViewTextBoxColumn.DataPropertyName = "id_curso";
+            this.idcursoDataGridViewTextBoxColumn.HeaderText = "id_curso";
+            this.idcursoDataGridViewTextBoxColumn.Name = "idcursoDataGridViewTextBoxColumn";
+            this.idcursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // porcavanceDataGridViewTextBoxColumn
+            // 
+            this.porcavanceDataGridViewTextBoxColumn.DataPropertyName = "porc_avance";
+            this.porcavanceDataGridViewTextBoxColumn.HeaderText = "porc_avance";
+            this.porcavanceDataGridViewTextBoxColumn.Name = "porcavanceDataGridViewTextBoxColumn";
+            this.porcavanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // UsuariosCurso
             // 
@@ -427,6 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
             this.ClientSize = new System.Drawing.Size(430, 450);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFechaContenido);
             this.Controls.Add(this.lblDescripcionContenido);
@@ -444,6 +456,8 @@
             this.Load += new System.EventHandler(this.UsuariosCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuariosCurso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDelCursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetUsuariosPorCursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugTrackerGrupo9DataSetUsuariosPorCurso)).EndInit();
@@ -487,16 +501,18 @@
         private System.Windows.Forms.BindingSource usuariosCursoAvanceBindingSource;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private BugTrackerGrupo9DataSet1 bugTrackerGrupo9DataSet1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
+        private System.Windows.Forms.BindingSource usuariosDelCursoBindingSource;
+        private DataSet1 dataSet1;
+        private DataSet1TableAdapters.UsuariosDelCursoTableAdapter usuariosDelCursoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn detalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn porc_avance;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idusuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idperfilDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn borradoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn porcavanceDataGridViewTextBoxColumn;
     }
 }

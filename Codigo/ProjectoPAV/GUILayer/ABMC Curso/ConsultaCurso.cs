@@ -111,6 +111,7 @@ namespace ProjectoPAV.GUILayer
             if (dgvCursos.CurrentCell.ColumnIndex == 4)
             {
                 var curso = (Curso)dgvCursos.CurrentRow.DataBoundItem;
+                curso.objetivos = new BindingList<Objetivo>();
                 ObjetivosCurso objXcurso = new ObjetivosCurso(curso);
                 objXcurso.ShowDialog();
             }
@@ -166,7 +167,8 @@ namespace ProjectoPAV.GUILayer
 
             for (int i = 0; i < dgvCursos.Rows.Count; i++)
             {
-                dgvCursos.Rows[i].Cells["Objetivos"].Value = "           ...";
+                dgvCursos.Rows[i].Cells["Objetivos"].Value = "      click";
+                dgvCursos.Rows[i].Cells["Usuarios"].Value = "      click";
 
             }
 

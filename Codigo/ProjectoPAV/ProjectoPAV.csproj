@@ -107,6 +107,11 @@
     <Compile Include="DataAccessLayer\DataManagerT.cs" />
     <Compile Include="DataAccessLayer\ObjetivoDao.cs" />
     <Compile Include="DataAccessLayer\UserDao.cs" />
+    <Compile Include="DataSetUsuariosDelCurso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuariosDelCurso.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Curso.cs" />
     <Compile Include="Entities\Objetivo.cs" />
@@ -312,6 +317,17 @@
     </None>
     <None Include="BugTrackerGrupo9DataSetUsuariosPorCurso.xss">
       <DependentUpon>BugTrackerGrupo9DataSetUsuariosPorCurso.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuariosDelCurso.xsc">
+      <DependentUpon>DataSetUsuariosDelCurso.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetUsuariosDelCurso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuariosDelCurso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetUsuariosDelCurso.xss">
+      <DependentUpon>DataSetUsuariosDelCurso.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjectoPAV.Entities.Objetivo.datasource" />

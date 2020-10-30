@@ -60,5 +60,11 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso);
+            formObjXCurso.ShowDialog();
+        }
     }
 }
