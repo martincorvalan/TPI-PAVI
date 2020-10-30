@@ -21,7 +21,7 @@ namespace ProjectoPAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu("guido"));
+            Application.Run(new Load());
         }
     }
 }
