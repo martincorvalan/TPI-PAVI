@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReporteInforme" targetNamespace="http://tempuri.org/DataSetReporteInforme.xsd" xmlns:mstns="http://tempuri.org/DataSetReporteInforme.xsd" xmlns="http://tempuri.org/DataSetReporteInforme.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BugTrackerGrupo9ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BugTrackerGrupo9ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectoPAV.Properties.Settings.GlobalReference.Default.BugTrackerGrupo9ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PorcentajeAvanceTableAdapter" GeneratorDataComponentClassName="PorcentajeAvanceTableAdapter" Name="PorcentajeAvance" UserDataComponentName="PorcentajeAvanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugTrackerGrupo9ConnectionString (Settings)" DbObjectName="BugTrackerGrupo9.dbo.Cursos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT c.nombre as curso,
+		AVG(uca.porc_avance) as porcentaje
+FROM Cursos c
+JOIN UsuariosCurso uc ON (c.id_curso = uc.id_curso)
+JOIN UsuariosCursoAvance uca ON (uc.id_curso = uca.id_curso)
+WHERE c.borrado = 0
+GROUP BY c.nombre</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="curso" DataSetColumn="curso" />
+              <Mapping SourceColumn="porcentaje" DataSetColumn="porcentaje" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="BugTrackerGrupo9ConnectionString (Settings)" DbObjectName="BugTrackerGrupo9.dbo.Cursos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT c.nombre as curso,
+		AVG(uca.porc_avance) as porcentaje
+FROM Cursos c
+JOIN UsuariosCurso uc ON (c.id_curso = uc.id_curso)
+JOIN UsuariosCursoAvance uca ON (uc.id_curso = uca.id_curso)
+WHERE c.borrado = 0
+GROUP BY c.nombre</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CantidadUsuariosCursoTableAdapter" GeneratorDataComponentClassName="CantidadUsuariosCursoTableAdapter" Name="CantidadUsuariosCurso" UserDataComponentName="CantidadUsuariosCursoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugTrackerGrupo9ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT c.nombre as curso,
+		uc.id_curso as id_curso,
+		COUNT(*) as cant
+FROM Cursos c
+JOIN UsuariosCurso uc ON (c.id_curso = uc.id_curso)
+WHERE c.borrado = 0
+GROUP BY c.nombre, uc.id_curso
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="curso" DataSetColumn="curso" />
+              <Mapping SourceColumn="id_curso" DataSetColumn="id_curso" />
+              <Mapping SourceColumn="cant" DataSetColumn="cant" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CantidadObjetivosCursoTableAdapter" GeneratorDataComponentClassName="CantidadObjetivosCursoTableAdapter" Name="CantidadObjetivosCurso" UserDataComponentName="CantidadObjetivosCursoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BugTrackerGrupo9ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT c.nombre as curso,
+	o.id_curso as id_curso,
+	COUNT(*) as cant
+FROM Cursos c
+JOIN ObjetivosCursos o ON (c.id_curso = o.id_curso)
+JOIN Objetivos obj ON ( o.id_objetivo = obj.id_objetivo)
+WHERE c.borrado = 0 AND o.borrado = 0 AND c.fecha_vigencia &gt; @Parameter1
+GROUP BY c.nombre, o.id_curso</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Parameter1" ColumnName="fecha_vigencia" DataSourceName="BugTrackerGrupo9.dbo.Cursos" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Parameter1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="fecha_vigencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="curso" DataSetColumn="curso" />
+              <Mapping SourceColumn="id_curso" DataSetColumn="id_curso" />
+              <Mapping SourceColumn="cant" DataSetColumn="cant" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReporteInforme" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReporteInforme" msprop:Generator_UserDSName="DataSetReporteInforme">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PorcentajeAvance" msprop:Generator_TableClassName="PorcentajeAvanceDataTable" msprop:Generator_TableVarName="tablePorcentajeAvance" msprop:Generator_TablePropName="PorcentajeAvance" msprop:Generator_RowDeletingName="PorcentajeAvanceRowDeleting" msprop:Generator_RowChangingName="PorcentajeAvanceRowChanging" msprop:Generator_RowEvHandlerName="PorcentajeAvanceRowChangeEventHandler" msprop:Generator_RowDeletedName="PorcentajeAvanceRowDeleted" msprop:Generator_UserTableName="PorcentajeAvance" msprop:Generator_RowChangedName="PorcentajeAvanceRowChanged" msprop:Generator_RowEvArgName="PorcentajeAvanceRowChangeEvent" msprop:Generator_RowClassName="PorcentajeAvanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="curso" msprop:Generator_ColumnVarNameInTable="columncurso" msprop:Generator_ColumnPropNameInRow="curso" msprop:Generator_ColumnPropNameInTable="cursoColumn" msprop:Generator_UserColumnName="curso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="porcentaje" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnporcentaje" msprop:Generator_ColumnPropNameInRow="porcentaje" msprop:Generator_ColumnPropNameInTable="porcentajeColumn" msprop:Generator_UserColumnName="porcentaje" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CantidadUsuariosCurso" msprop:Generator_TableClassName="CantidadUsuariosCursoDataTable" msprop:Generator_TableVarName="tableCantidadUsuariosCurso" msprop:Generator_TablePropName="CantidadUsuariosCurso" msprop:Generator_RowDeletingName="CantidadUsuariosCursoRowDeleting" msprop:Generator_RowChangingName="CantidadUsuariosCursoRowChanging" msprop:Generator_RowEvHandlerName="CantidadUsuariosCursoRowChangeEventHandler" msprop:Generator_RowDeletedName="CantidadUsuariosCursoRowDeleted" msprop:Generator_UserTableName="CantidadUsuariosCurso" msprop:Generator_RowChangedName="CantidadUsuariosCursoRowChanged" msprop:Generator_RowEvArgName="CantidadUsuariosCursoRowChangeEvent" msprop:Generator_RowClassName="CantidadUsuariosCursoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="curso" msprop:Generator_ColumnVarNameInTable="columncurso" msprop:Generator_ColumnPropNameInRow="curso" msprop:Generator_ColumnPropNameInTable="cursoColumn" msprop:Generator_UserColumnName="curso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_curso" msprop:Generator_ColumnVarNameInTable="columnid_curso" msprop:Generator_ColumnPropNameInRow="id_curso" msprop:Generator_ColumnPropNameInTable="id_cursoColumn" msprop:Generator_UserColumnName="id_curso" type="xs:int" />
+              <xs:element name="cant" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_UserColumnName="cant" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CantidadObjetivosCurso" msprop:Generator_TableClassName="CantidadObjetivosCursoDataTable" msprop:Generator_TableVarName="tableCantidadObjetivosCurso" msprop:Generator_TablePropName="CantidadObjetivosCurso" msprop:Generator_RowDeletingName="CantidadObjetivosCursoRowDeleting" msprop:Generator_RowChangingName="CantidadObjetivosCursoRowChanging" msprop:Generator_RowEvHandlerName="CantidadObjetivosCursoRowChangeEventHandler" msprop:Generator_RowDeletedName="CantidadObjetivosCursoRowDeleted" msprop:Generator_UserTableName="CantidadObjetivosCurso" msprop:Generator_RowChangedName="CantidadObjetivosCursoRowChanged" msprop:Generator_RowEvArgName="CantidadObjetivosCursoRowChangeEvent" msprop:Generator_RowClassName="CantidadObjetivosCursoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="curso" msprop:Generator_ColumnVarNameInTable="columncurso" msprop:Generator_ColumnPropNameInRow="curso" msprop:Generator_ColumnPropNameInTable="cursoColumn" msprop:Generator_UserColumnName="curso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_curso" msprop:Generator_ColumnVarNameInTable="columnid_curso" msprop:Generator_ColumnPropNameInRow="id_curso" msprop:Generator_ColumnPropNameInTable="id_cursoColumn" msprop:Generator_UserColumnName="id_curso" type="xs:int" />
+              <xs:element name="cant" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_UserColumnName="cant" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

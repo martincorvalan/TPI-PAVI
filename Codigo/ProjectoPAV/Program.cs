@@ -1,6 +1,7 @@
 ﻿using ProjectoPAV.Entities;
 using ProjectoPAV.GUILayer;
 using ProjectoPAV.GUILayer.ABMC_Curso;
+using ProjectoPAV.Reporte;
 using System;
 using System.Collections.Generic;
 using System.Linq;

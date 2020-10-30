@@ -58,7 +58,6 @@ C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.
 C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CoreCompileInputs.cache
 C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.exe
 C:\Users\naty_\Desktop\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.pdb
-C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ModificarCurso.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.Menu.resources
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csproj.CopyComplete
 C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.csprojAssemblyReference.cache
@@ -132,3 +131,72 @@ C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\bak proyecto pav\Codigo
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\bak proyecto pav\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.exe
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\bak proyecto pav\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.pdb
 C:\Users\Guido.DESKTOP-S6M8A1A\Desktop\UTN\3° año\PAV1\Repositorios\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.ABMObjetivosCurso.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.ABMObjetivosCurso.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.DetalleUsuarios.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.ABMUsuariosCurso.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.GUILayer.ABMC_Curso.UsuariosCurso.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\ProjectoPAV.Reporte.ReporteInforme.resources
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\RdlCompile.cache
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\obj\Debug\RdlCompile.compiled
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\EnvDTE.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\stdole.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Mariano\Google Drive\2020 - 3K1 - 3K3A\PAV\Repositorio\TPI-PAVI\Codigo\ProjectoPAV\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll

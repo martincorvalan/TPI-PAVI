@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Microsoft.VisualBasic;
+using ProjectoPAV.Reporte;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -90,6 +91,7 @@ namespace ProjectoPAV.GUILayer
             btnCategorias.Checked = false;
             btnCursos.Checked = false;
             btnOpcion.Checked = false;
+            btnReporte.Checked = false;
             imageCurve.Visible = false;
             logoMenu.BringToFront();
 
@@ -105,6 +107,11 @@ namespace ProjectoPAV.GUILayer
         private void btnOpcion_Click(object sender, EventArgs e)
         {
             OpenForm<ConsultaObjetivo>();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            OpenForm<ReporteInforme>();
         }
     }
 }

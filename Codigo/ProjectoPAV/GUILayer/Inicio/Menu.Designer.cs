@@ -35,7 +35,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.logoMenu = new System.Windows.Forms.PictureBox();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.lblLogueado = new System.Windows.Forms.Label();
             this.userLogo = new System.Windows.Forms.PictureBox();
@@ -48,16 +47,18 @@
             this.imageCurve = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnReporte = new Guna.UI2.WinForms.Guna2Button();
+            this.logoMenu = new System.Windows.Forms.PictureBox();
             this.panelContainer.SuspendLayout();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCentral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCurve)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContainer
@@ -115,18 +116,9 @@
             this.panelCentral.Size = new System.Drawing.Size(897, 647);
             this.panelCentral.TabIndex = 1;
             // 
-            // logoMenu
-            // 
-            this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
-            this.logoMenu.Location = new System.Drawing.Point(0, 5);
-            this.logoMenu.Name = "logoMenu";
-            this.logoMenu.Size = new System.Drawing.Size(897, 625);
-            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoMenu.TabIndex = 0;
-            this.logoMenu.TabStop = false;
-            // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.btnReporte);
             this.leftPanel.Controls.Add(this.lblLogueado);
             this.leftPanel.Controls.Add(this.userLogo);
             this.leftPanel.Controls.Add(this.btnOpcion);
@@ -173,7 +165,7 @@
             this.btnOpcion.CheckedState.Parent = this.btnOpcion;
             this.btnOpcion.CustomImages.Parent = this.btnOpcion;
             this.btnOpcion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
-            this.btnOpcion.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpcion.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.btnOpcion.ForeColor = System.Drawing.Color.White;
             this.btnOpcion.HoverState.Parent = this.btnOpcion;
             this.btnOpcion.Location = new System.Drawing.Point(22, 327);
@@ -286,6 +278,39 @@
             this.guna2Elipse2.BorderRadius = 22;
             this.guna2Elipse2.TargetControl = this.panelCentral;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.BorderRadius = 22;
+            this.btnReporte.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnReporte.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
+            this.btnReporte.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.btnReporte.CheckedState.Parent = this.btnReporte;
+            this.btnReporte.CustomImages.Parent = this.btnReporte;
+            this.btnReporte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.btnReporte.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.HoverState.Parent = this.btnReporte;
+            this.btnReporte.Location = new System.Drawing.Point(22, 408);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.ShadowDecoration.Parent = this.btnReporte;
+            this.btnReporte.Size = new System.Drawing.Size(226, 45);
+            this.btnReporte.TabIndex = 7;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseTransparentBackground = true;
+            this.btnReporte.CheckedChanged += new System.EventHandler(this.btnCursos_CheckedChanged);
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // logoMenu
+            // 
+            this.logoMenu.Image = ((System.Drawing.Image)(resources.GetObject("logoMenu.Image")));
+            this.logoMenu.Location = new System.Drawing.Point(0, 5);
+            this.logoMenu.Name = "logoMenu";
+            this.logoMenu.Size = new System.Drawing.Size(897, 625);
+            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoMenu.TabIndex = 0;
+            this.logoMenu.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,12 +327,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelCentral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCurve)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,8 +354,9 @@
         private System.Windows.Forms.Panel panelBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox logoMenu;
         private System.Windows.Forms.PictureBox userLogo;
         private System.Windows.Forms.Label lblLogueado;
+        private Guna.UI2.WinForms.Guna2Button btnReporte;
+        private System.Windows.Forms.PictureBox logoMenu;
     }
 }
