@@ -62,6 +62,100 @@ namespace ProjectoPAV.DataAccessLayer
             return listaCurso;
         }
 
+        public bool AgregarObjetivos(List<Objetivo> objetivos, int id_curso)
+        {
+            DataManagerT dm = new DataManagerT();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+                foreach (var itemObjetivo in objetivos)
+                {
+
+                    if (itemObjetivo.id_objetivo == 0)
+                    {
+                        var paramObj = new Dictionary<string, object>();
+                        String sqlQueryObj = string.Concat("INSERT INTO [dbo].[Objetivos] ",
+                                                        "([nombre_corto] ",
+                                                        ",[nombre_largo] ",
+                                                        ",[borrado]) ",
+                                                        "VALUES ",
+                                                        "(@nombreC ",
+                                                        ", @nombreL ",
+                                                        ", 0) ",
+
+                                                       "INSERT INTO [dbo].[ObjetivosCursos] ",
+                                                       "([id_objetivo] ",
+                                                       ",[id_curso] ",
+                                                       ",[puntos] ",
+                                                       ",[borrado]) ",
+                                                       "VALUES ",
+                                                       "( ident_current('Objetivos')",
+                                                       ", @id_curso ",
+                                                       ", 4 ",
+                                                       ", 0 )");
+
+                        paramObj.Add("nombreC", itemObjetivo.nombre_corto);
+                        paramObj.Add("nombreL", itemObjetivo.nombre_largo);
+                        paramObj.Add("id_curso", id_curso);
+
+                        dm.EjecutarSQL(sqlQueryObj, paramObj);
+                        continue;
+                    }
+
+                    var paramObjxCurso = new Dictionary<string, object>();
+                    paramObjxCurso.Add("id_objetivo", itemObjetivo.id_objetivo);
+                    paramObjxCurso.Add("id_curso", id_curso);
+
+                    String sqlObjXCurso = string.Concat("INSERT INTO [dbo].[ObjetivosCursos] ",
+                                               "([id_objetivo] ",
+                                               ",[id_curso] ",
+                                               ",[puntos] ",
+                                               ",[borrado]) ",
+                                               "VALUES ",
+                                               "( @id_objetivo",
+                                               ", @id_curso ",
+                                               ", 4 ",
+                                               ", 0 )");
+                    dm.EjecutarSQL(sqlObjXCurso, paramObjxCurso);
+
+                }
+
+                dm.Commit();
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+
+            return true;
+
+        }
+
+        public bool ActualizarAvance(Dictionary<string, object> avance)
+        {
+            String sqlQuery = @"UPDATE [dbo].[UsuariosCursoAvance]
+                               SET[porc_avance] = @avance
+                               WHERE id_curso = @id_curso AND id_usuario = @id_usuario";
+            return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, avance) != 0;
+        }
+
+        public bool ActualizarAvanceTodos(Dictionary<string, object> avance)
+        {
+            String sqlQuery = @"UPDATE [dbo].[UsuariosCursoAvance]
+                               SET[porc_avance] = @avance
+                               WHERE id_curso = @id_curso";
+            return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, avance) != 0;
+
+
+        }
+
         public bool borrar(Curso oCurso)
         {
             var param = new Dictionary<string, object>();

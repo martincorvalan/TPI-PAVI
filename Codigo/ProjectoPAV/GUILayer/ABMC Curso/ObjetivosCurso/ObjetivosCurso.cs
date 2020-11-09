@@ -27,14 +27,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
         private void ObjetivosCurso_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'bugTrackerGrupo9DataSet2.Clientes' Puede moverla o quitarla según sea necesario.
-            try
-            {
-                this.objetivosTableAdapter.objetivos_x_curso1(this.bugTrackerGrupo9DataSet.Objetivos, oCurso.id_curso);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            objetivosDelCurso();
 
         }
 
@@ -63,8 +56,22 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso);
+            ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso, ABMObjetivosCurso.FormMode.agregar);
             formObjXCurso.ShowDialog();
+            objetivosDelCurso();
+
+        }
+
+        private void objetivosDelCurso()
+        {
+            try
+            {
+                this.objetivosTableAdapter.objetivos_x_curso1(this.bugTrackerGrupo9DataSet.Objetivos, oCurso.id_curso);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }

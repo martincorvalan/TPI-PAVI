@@ -24,7 +24,6 @@ namespace ProjectoPAV.GUILayer
             InitializeDataGridView();
         }
 
-
         private void InitializeDataGridView()
         {
             // Cree un DataGridView no vinculado declarando un recuento de columnas.
@@ -197,7 +196,6 @@ namespace ProjectoPAV.GUILayer
                 frmABM.ShowDialog();
                 btnSearch_Click(sender, e);
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

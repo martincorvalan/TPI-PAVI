@@ -51,5 +51,20 @@ namespace ProjectoPAV.BussinesLayer
         {
             return cursoDao.InsertUsuarios(idcurso, usuarios);
         }
+
+        public bool ActualizarAvanceTodos(Dictionary<string, object> avance)
+        {
+            return cursoDao.ActualizarAvanceTodos(avance);
+        }
+
+        public bool ActualizarAvance(Dictionary<string, object> avance)
+        {
+            return cursoDao.ActualizarAvance(avance);
+        }
+
+        public bool AgregarObjetivos(List<Objetivo> objetivos, int id_curso)
+        {
+            return cursoDao.AgregarObjetivos(objetivos, id_curso);
+        }
     }
 }

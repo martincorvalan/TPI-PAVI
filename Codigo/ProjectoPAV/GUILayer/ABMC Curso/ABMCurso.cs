@@ -92,7 +92,7 @@ namespace ProjectoPAV.GUILayer
                                 oCurso.fecha = Convert.ToDateTime(dtpFecha.Value);
                                 oCurso.categoria.id_categoria = (int)cmbCategoria.SelectedValue;
                                 oCurso.objetivos = new BindingList<Objetivo>();
-                                ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso);
+                                ABMObjetivosCurso formObjXCurso = new ABMObjetivosCurso(oCurso, ABMObjetivosCurso.FormMode.agregarConCurso);
                                 formObjXCurso.ShowDialog();
 
                                 //AgregarObjetivo(oCurso);
@@ -128,13 +128,13 @@ namespace ProjectoPAV.GUILayer
 
 
                            var resultado = cursoService.ModificarCurso(oCursoSel);
-                            if (cursoService.ModificarCurso(oCursoSel))
+                            if (resultado)
                             {
                                 MessageBox.Show("El Curso seleccionado fue Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("El Curso seleccionado no puedo ser Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("El Curso seleccionado no pudo ser Modificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         break;

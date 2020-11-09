@@ -1,4 +1,5 @@
-﻿using ProjectoPAV.Entities;
+﻿using ProjectoPAV.BussinesLayer;
+using ProjectoPAV.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
     public partial class UsuariosCurso : Form
     {
         private Curso oCurso;
+
+        private readonly CursoService cursoService;
         public UsuariosCurso(Curso curso)
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
             lblNombreCurso.Text = oCurso.nombre;
             lblFechaContenido.Text = oCurso.fecha.ToString();
             lblDescripcionContenido.Text = oCurso.descripcion;
+            cursoService = new CursoService();
         }
 
         private void UsuariosCurso_Load(object sender, EventArgs e)
@@ -71,6 +75,50 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
             {
                 
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if(validarDatos())
+            {
+                if (chkActualizarTodos.Checked)
+                {
+                    var avance = new Dictionary<string, object>();
+                    avance.Add("id_curso", oCurso.id_curso);
+                    avance.Add("avance", txtAvance.Text);
+                    var resultado = cursoService.ActualizarAvanceTodos(avance);
+                    txtAvance.Clear();
+                    chkActualizarTodos.Checked = false;
+
+                }
+                else
+                {
+                    if (dgvUsuariosCurso.CurrentCell != null)
+                    {
+                        int id = (int)dgvUsuariosCurso.CurrentRow.Cells[3].Value;
+                        var avance = new Dictionary<string, object>();
+                        avance.Add("id_curso", oCurso.id_curso);
+                        avance.Add("id_usuario", id);
+                        avance.Add("avance", txtAvance.Text);
+                        var resultado = cursoService.ActualizarAvance(avance);
+                        txtAvance.Clear();
+                        
+                    }
+                }
+                usuariosInscriptos();
+            }
+        }
+
+        public bool validarDatos()
+        {
+            int avance = Int32.Parse(txtAvance.Text);
+            if (avance > 100 || avance < 0)
+            {
+                lblErrorAvance.Visible = true;
+                return false;
+            }
+            lblErrorAvance.Visible = false;
+            return true;
         }
     }
 }
