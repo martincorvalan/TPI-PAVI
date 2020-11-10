@@ -82,14 +82,22 @@ namespace ProjectoPAV.GUILayer
 
         private void LlenarCombo(ComboBox cmb, Object source, string display, String value)
         {
+            DataTable sourceDT = (DataTable)source;
+
+            object[] objrow = new object[] { 0, "Todas"};
+
+            DataRow row = sourceDT.NewRow();
+            row.ItemArray = objrow;
+            sourceDT.Rows.InsertAt(row, 0);
+
             // Datasource: establece el origen de datos de este objeto.
-            cmb.DataSource = source;
+            cmb.DataSource = sourceDT;
             // DisplayMember: establece la propiedad que se va a mostrar para este ListControl.
             cmb.DisplayMember = display;
             // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
             cmb.ValueMember = value;
             //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
-            cmb.SelectedIndex = -1;
+            cmb.SelectedIndex = 0;
         }
 
         private void ConsultaCurso_Load(object sender, EventArgs e)
@@ -141,15 +149,11 @@ namespace ProjectoPAV.GUILayer
 
             if (!string.IsNullOrEmpty(cmbCategoria.Text))
             {
-                if (cmbCategoria.FindStringExact(cmbCategoria.Text) != -1)
+                if (cmbCategoria.FindStringExact(cmbCategoria.Text) != 0)
                 {
                     var categoria = cmbCategoria.SelectedValue.ToString();
                     filtros.Add("IdCategoria", categoria);
                     lblCategoriaIncorrecta.Visible = false;
-                }
-                else
-                {
-                    lblCategoriaIncorrecta.Visible = true;
                 }
             }
 
