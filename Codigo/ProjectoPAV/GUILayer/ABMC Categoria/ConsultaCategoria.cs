@@ -49,7 +49,7 @@ namespace ProjectoPAV.GUILayer
             dgvCategorias.Columns[1].Width = 120;
 
             dgvCategorias.Columns[2].Name = "Estado";
-            dgvCategorias.Columns[2].DataPropertyName = "Estado";
+            dgvCategorias.Columns[2].DataPropertyName = "borrado";
             dgvCategorias.Columns[2].Width = 120;
 
 
@@ -70,6 +70,11 @@ namespace ProjectoPAV.GUILayer
             if (txtNombre.Text != string.Empty)
             {
                 filtros.Add("Nombre", txtNombre.Text);
+            }
+
+            if (chbBorrados.Checked)
+            {
+                filtros.Add("Borrado", true);
             }
 
 
@@ -120,6 +125,20 @@ namespace ProjectoPAV.GUILayer
         {
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
+        }
+
+        private void dgvCategorias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvCategorias.Columns[e.ColumnIndex].Name == "Estado")
+            {
+                if ((string)e.Value == "Borrado")
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(211, 110, 112);
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(211, 110, 112);
+                }
+                e.Value = "";
+            }
         }
 
     }

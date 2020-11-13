@@ -62,6 +62,11 @@ namespace ProjectoPAV.GUILayer
                     {
                         this.Text = "Modificar Objetivo";
                         MostrarDatos();
+                        if (oObjetivoSel.borrado == "Borrado")
+                        {
+                            chbDarAlta.Visible = true;
+                            lblDarAlta.Visible = true;
+                        }
                         this.btnCancelar.Text = "Cancelar";
                         break;
                     }
@@ -152,6 +157,8 @@ namespace ProjectoPAV.GUILayer
                         {
                             oObjetivoSel.nombre_corto = txtNombreCorto.Text;
                             oObjetivoSel.nombre_largo = txtNombreLargo.Text;
+                            if (chbDarAlta.Visible == true)
+                                oObjetivoSel.borrado = chbDarAlta.Checked ? "Activo" : "Borrado";
 
                             var resultado = objetivoService.ModificarObjetivo(oObjetivoSel);
                             if (objetivoService.ModificarObjetivo(oObjetivoSel))

@@ -37,11 +37,11 @@ namespace ProjectoPAV.DataAccessLayer
 
             String SqlQuery = string.Concat("SELECT *",
                                             "FROM Categorias c ",
-                                            "WHERE c.borrado = 0");
+                                            "WHERE 1 = 1");
             if (param.ContainsKey("Nombre"))
                 SqlQuery += " AND (c.nombre LIKE '%'+ @Nombre + '%') ";
-
-
+            if (!param.ContainsKey("Borrado"))
+                SqlQuery += " AND (c.borrado = 0) ";
 
             var resQuery = DataManager.GetInstance().ConsultaSQL(SqlQuery, param);
 
@@ -80,12 +80,17 @@ namespace ProjectoPAV.DataAccessLayer
             String sqlQuery = string.Concat("UPDATE[dbo].[Categorias] ",
                                             "SET[nombre] = @nombre ",
                                             ",[descripcion] = @descripcion ",
+                                            ",[borrado] = @borrado ",
                                             "WHERE id_categoria = @id_categoria"
                                              );
 
             param.Add("id_categoria", oCategoria.id_categoria);
             param.Add("nombre", oCategoria.nombre);
             param.Add("Descripcion", oCategoria.descripcion);
+            if (oCategoria.borrado == "Activo")
+                param.Add("borrado", 0);
+            else
+                param.Add("borrado", 1);
 
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
@@ -112,7 +117,8 @@ namespace ProjectoPAV.DataAccessLayer
             {
                 nombre = row["nombre"].ToString(),
                 id_categoria = Convert.ToInt32(row["id_categoria"].ToString()),
-                descripcion = row["descripcion"].ToString()
+                descripcion = row["descripcion"].ToString(),
+                borrado = row["borrado"].ToString() == "True" ? "Borrado" : "Activo",
             };
             return oCategoria ;
         }

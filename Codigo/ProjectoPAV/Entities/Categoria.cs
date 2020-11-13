@@ -11,6 +11,7 @@ namespace ProjectoPAV.Entities
         public int id_categoria { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
+        public string borrado { get; set; }
 
         public override string ToString()
         {

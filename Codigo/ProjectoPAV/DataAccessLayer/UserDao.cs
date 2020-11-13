@@ -46,7 +46,7 @@ namespace ProjectoPAV.DataAccessLayer
                                           "        p.nombre perfil ",
                                           "  FROM Usuarios u",
                                           "  INNER JOIN Perfiles p ON u.id_perfil= p.id_perfil ",
-                                          "  WHERE usuario = @usuario");
+                                          "  WHERE u.borrado = 0 AND usuario = @usuario");
 
             var param = new Dictionary<string, object>();
             param.Add("usuario", username);

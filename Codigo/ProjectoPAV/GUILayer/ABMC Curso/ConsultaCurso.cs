@@ -233,7 +233,6 @@ namespace ProjectoPAV.GUILayer
                 }
                 e.Value = "";
             }
-           
         }
 
         private void lblBorradosCheck_Click(object sender, EventArgs e)

@@ -905,7 +905,7 @@ FROM            Usuarios
 WHERE        (id_usuario NOT IN
                              (SELECT        u.id_usuario
                                FROM            Usuarios AS u INNER JOIN
-                                                         UsuariosCurso AS uc ON u.id_usuario = uc.id_usuario AND uc.id_curso = @id_curso))";
+                                                         UsuariosCurso AS uc ON u.id_usuario = uc.id_usuario AND uc.id_curso = @id_curso)) AND (borrado = 0)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_curso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

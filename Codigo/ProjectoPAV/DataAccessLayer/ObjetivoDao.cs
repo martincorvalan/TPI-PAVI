@@ -16,9 +16,11 @@ namespace ProjectoPAV.DataAccessLayer
 
             String SqlQuery = string.Concat("SELECT *",
                                             "FROM Objetivos  ",
-                                            "WHERE borrado = 0 ");
+                                            "WHERE 1 = 1 ");
             if (param.ContainsKey("Nombre"))
                 SqlQuery += " AND (nombre_corto LIKE '%'+ @Nombre + '%') ";
+            if (!param.ContainsKey("Borrado"))
+                SqlQuery += " AND ( borrado = 0) ";
 
 
 
@@ -78,12 +80,17 @@ namespace ProjectoPAV.DataAccessLayer
             String sqlQuery = string.Concat("UPDATE[dbo].[Objetivos] ",
                                             "SET[nombre_corto] = @nombre_corto ",
                                             ",[nombre_largo] = @nombre_largo ",
+                                            ",[borrado] = @borrado ",
                                             "WHERE id_objetivo = @id_objetivo"
                                              );
 
             param.Add("id_objetivo", oObjetivo.id_objetivo);
             param.Add("nombre_corto", oObjetivo.nombre_corto);
             param.Add("nombre_largo", oObjetivo.nombre_largo);
+            if (oObjetivo.borrado == "Activo")
+                param.Add("borrado", 0);
+            else
+                param.Add("borrado", 1);
 
             return DataManager.GetInstance().EjecutarSqlParametros(sqlQuery, param) > 0;
         }
@@ -109,7 +116,8 @@ namespace ProjectoPAV.DataAccessLayer
             {
                 nombre_corto = row["nombre_corto"].ToString(),
                 id_objetivo = Convert.ToInt32(row["id_objetivo"].ToString()),
-                nombre_largo = row["nombre_largo"].ToString()
+                nombre_largo = row["nombre_largo"].ToString(),
+                borrado = row["borrado"].ToString() == "True" ? "Borrado" : "Activo",
             };
             return oObjetivo;
         }

@@ -49,7 +49,7 @@ namespace ProjectoPAV.GUILayer
             dgvObjetivos.Columns[1].Width = 120;
 
             dgvObjetivos.Columns[2].Name = "Estado";
-            dgvObjetivos.Columns[2].DataPropertyName = "Estado";
+            dgvObjetivos.Columns[2].DataPropertyName = "borrado";
             dgvObjetivos.Columns[2].Width = 120;
 
 
@@ -72,6 +72,10 @@ namespace ProjectoPAV.GUILayer
                 filtros.Add("Nombre", txtNombre.Text);
             }
 
+            if (chbBorrados.Checked)
+            {
+                filtros.Add("Borrado", true);
+            }
 
             IList<Objetivo> listadoObjetivos = objetivoService.ConsultarObjetivos(filtros);
 
@@ -120,6 +124,20 @@ namespace ProjectoPAV.GUILayer
         {
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
+        }
+
+        private void dgvObjetivos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dgvObjetivos.Columns[e.ColumnIndex].Name == "Estado")
+            {
+                if ((string)e.Value == "Borrado")
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(211, 110, 112);
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(211, 110, 112);
+                }
+                e.Value = "";
+            }
         }
     }
 }

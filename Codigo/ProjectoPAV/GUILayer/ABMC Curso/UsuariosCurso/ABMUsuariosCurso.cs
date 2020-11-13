@@ -65,7 +65,7 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
                 }
             }
             var resultado = cursoService.AgregarUsuarios(oCurso.id_curso, usuarios);
-            consultarUsuariosNoInscriptos();
+            this.Close();
         }
 
         private void consultarUsuariosNoInscriptos()

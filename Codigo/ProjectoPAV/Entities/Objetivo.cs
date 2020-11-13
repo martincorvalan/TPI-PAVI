@@ -11,6 +11,7 @@ namespace ProjectoPAV.Entities
         public int id_objetivo { get; set; }
         public string nombre_corto { get; set; }
         public string nombre_largo { get; set; }
+        public string borrado { get; set; }
 
     }
 }

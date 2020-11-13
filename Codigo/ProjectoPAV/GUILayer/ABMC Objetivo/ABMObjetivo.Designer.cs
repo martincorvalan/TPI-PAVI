@@ -37,6 +37,9 @@
             this.lblNombreCorto = new System.Windows.Forms.Label();
             this.background = new System.Windows.Forms.PictureBox();
             this.txtNombreCorto = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chbDarAlta = new System.Windows.Forms.CheckBox();
+            this.lblDarAlta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +152,45 @@
             this.txtNombreCorto.Size = new System.Drawing.Size(174, 13);
             this.txtNombreCorto.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(160, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(174, 1);
+            this.panel1.TabIndex = 40;
+            // 
+            // chbDarAlta
+            // 
+            this.chbDarAlta.AutoSize = true;
+            this.chbDarAlta.Location = new System.Drawing.Point(159, 175);
+            this.chbDarAlta.Name = "chbDarAlta";
+            this.chbDarAlta.Size = new System.Drawing.Size(15, 14);
+            this.chbDarAlta.TabIndex = 42;
+            this.chbDarAlta.UseVisualStyleBackColor = true;
+            this.chbDarAlta.Visible = false;
+            // 
+            // lblDarAlta
+            // 
+            this.lblDarAlta.AutoSize = true;
+            this.lblDarAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(57)))));
+            this.lblDarAlta.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDarAlta.ForeColor = System.Drawing.Color.White;
+            this.lblDarAlta.Location = new System.Drawing.Point(95, 175);
+            this.lblDarAlta.Name = "lblDarAlta";
+            this.lblDarAlta.Size = new System.Drawing.Size(52, 15);
+            this.lblDarAlta.TabIndex = 41;
+            this.lblDarAlta.Text = "Dar Alta";
+            this.lblDarAlta.Visible = false;
+            // 
             // ABMObjetivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 364);
+            this.Controls.Add(this.chbDarAlta);
+            this.Controls.Add(this.lblDarAlta);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNombreCorto);
             this.Controls.Add(this.txtNombreLargo);
             this.Controls.Add(this.panel2);
@@ -185,5 +222,8 @@
         private System.Windows.Forms.Label lblNombreCorto;
         private System.Windows.Forms.PictureBox background;
         private System.Windows.Forms.TextBox txtNombreCorto;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chbDarAlta;
+        private System.Windows.Forms.Label lblDarAlta;
     }
 }

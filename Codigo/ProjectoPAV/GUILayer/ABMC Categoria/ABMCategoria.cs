@@ -50,6 +50,11 @@ namespace ProjectoPAV.GUILayer
                     {
                         this.Text = "Modificar Categoria";
                         MostrarDatos();
+                        if (oCategoriaSel.borrado == "Borrado")
+                        {
+                            chbDarAlta.Visible = true;
+                            lblDarAlta.Visible = true;
+                        }
                         break;
                     }
                 case FormMode.eliminar:
@@ -130,6 +135,8 @@ namespace ProjectoPAV.GUILayer
                         {
                             oCategoriaSel.nombre = txtNombre.Text;
                             oCategoriaSel.descripcion = txtDescripcion.Text;
+                            if (chbDarAlta.Visible == true)
+                                oCategoriaSel.borrado = chbDarAlta.Checked ? "Activo" : "Borrado";
 
                             var resultado = categoriaService.ModificarCategoria(oCategoriaSel);
                             if (categoriaService.ModificarCategoria(oCategoriaSel))

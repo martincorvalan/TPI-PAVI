@@ -41,6 +41,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chbBorrados = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
@@ -176,6 +177,7 @@
             this.dgvCategorias.Size = new System.Drawing.Size(505, 500);
             this.dgvCategorias.TabIndex = 20;
             this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
+            this.dgvCategorias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCategorias_CellFormatting);
             // 
             // pictureBox1
             // 
@@ -188,11 +190,23 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
+            // chbBorrados
+            // 
+            this.chbBorrados.AutoSize = true;
+            this.chbBorrados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
+            this.chbBorrados.Location = new System.Drawing.Point(87, 210);
+            this.chbBorrados.Name = "chbBorrados";
+            this.chbBorrados.Size = new System.Drawing.Size(98, 17);
+            this.chbBorrados.TabIndex = 34;
+            this.chbBorrados.Text = "Incluir borrados";
+            this.chbBorrados.UseVisualStyleBackColor = false;
+            // 
             // ConsultaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 676);
+            this.Controls.Add(this.chbBorrados);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -226,5 +240,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox chbBorrados;
     }
 }

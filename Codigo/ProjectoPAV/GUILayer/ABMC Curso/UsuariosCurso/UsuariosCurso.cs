@@ -111,6 +111,11 @@ namespace ProjectoPAV.GUILayer.ABMC_Curso
 
         public bool validarDatos()
         {
+            if (txtAvance.Text == "")
+            {
+                lblErrorAvance.Visible = true;
+                return false;
+            }
             int avance = Int32.Parse(txtAvance.Text);
             if (avance > 100 || avance < 0)
             {
